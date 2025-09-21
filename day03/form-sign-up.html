@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form sign up</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <form action="" id="signup-form">
+      <header class="header-form">
+        <h1>Try a free sample</h1>
+        <p>
+          Sign up to get a coupon you can redeem at your nearest Dancing Goat
+          cafe for a sample of the Colombia Carlos lmbachi coffee. We'll also
+          make sure you don't miss out on news introducing the new coffees that
+          we add to our store regularly.
+        </p>
+      </header>
+
+      <section class="main-form">
+        <div class="content-left">
+          <div class="content-item">
+            <label for="first-name">First name</label>
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="John"
+            />
+          </div>
+
+          <div class="content-item">
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="john@example.com"
+            />
+          </div>
+
+          <div class="content-item">
+            <label for="city">City</label>
+            <input type="text" name="city" id="city" placeholder="London" />
+          </div>
+
+          <div class="content-item">
+            <label for="zip">ZIP code</label>
+            <input type="text" name="zip" id="zip" placeholder="EC2Y8DS" />
+          </div>
+        </div>
+
+        <div class="content-right">
+          <div class="content-item">
+            <label for="last-name">Last name</label>
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              placeholder="Smith"
+            />
+          </div>
+
+          <div class="content-item">
+            <label for="address">Address</label>
+            <input
+              type="text"
+              name="address"
+              id="address"
+              placeholder="Silk St"
+            />
+          </div>
+
+          <div class="content-item">
+            <label for="state">State</label> <span>(optional)</span>
+            <input type="text" name="state" id="state" />
+          </div>
+
+          <div class="content-item">
+            <label for="country">Country</label>
+            <select name="country" id="country">
+              <option value="uk">United Kingdom</option>
+              <option value="us">United States</option>
+              <option value="ca">Canada</option>
+              <option value="au">Australia</option>
+            </select>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </section>
+
+      <button type="submit" id="submit-btn">SEND ME FREE COFFEE</button>
+    </form>
+  </body>
+</html>
