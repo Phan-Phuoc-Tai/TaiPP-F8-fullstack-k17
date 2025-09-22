@@ -1,0 +1,114 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.clear {
+  clear: both;
+}
+/* Signup form BEGIN */
+#signup-form {
+  width: 500px;
+  height: auto;
+  border: 1px solid #ccc;
+  background-color: #ddd;
+  padding: 16px;
+}
+/* Header-form BEGIN */
+.header-form {
+  margin-bottom: 32px;
+}
+.header-form h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: #333;
+}
+.header-form p {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #333;
+}
+/* Header-form END */
+
+/* Main-form BEGIN */
+.main-form {
+  margin-bottom: 16px;
+}
+
+.content-left,.content-right {
+  display: inline-block;
+  
+}
+/* content-left begin */
+.content-left {
+  width: 48%;
+}
+
+.content-left .content-item {
+  margin-bottom: 16px;
+}
+
+.content-left .content-item label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.content-left .content-item input {
+  margin-top: 4px;
+  width: 100%;
+  height: 28px;
+  border: none;
+  border-radius: 4px;
+  padding: 0 8px;
+}
+/* content-left end */
+/* content-right begin */
+.content-right {
+  width: 48%;
+  float: right;
+}
+
+.content-right .content-item {
+  margin-bottom: 16px;
+}
+
+.content-right .content-item label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.content-right .content-item span {
+  color: #757575;
+}
+
+.content-right .content-item input {
+  margin-top: 4px;
+  width: 100%;
+  height: 28px;
+  border: none;
+  border-radius: 4px;
+  padding: 0 8px;
+}
+
+.content-right .content-item select {
+  width: 100%;
+  height: 32px;
+  border: none;
+  border-radius: 4px;
+  padding: 0 8px;
+}
+/* content-right end */
+/* Main-form END */
+
+#submit-btn {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(34, 117, 34);
+  color: #fff;
+}
+/* Signup form END */
