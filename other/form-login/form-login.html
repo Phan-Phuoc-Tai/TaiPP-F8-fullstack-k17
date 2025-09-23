@@ -10,52 +10,45 @@
     <form action="" id="login-form">
       <section id="login-form-main">
         <div class="login-form-info">
-          <div>
-            <label for="user-name">Username:</label>
-            <input type="email" id="user-name" name="user-name" required />
-          </div>
+          <label for="user-name">Username:</label>
+          <input type="email" id="user-name" name="user-name" required />
 
-          <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required />
-          </div>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
 
-          <div>
-            <label for="city">City of<br />Employment:</label>
-            <input type="text" id="city" name="city" required />
-          </div>
-          <div>
-            <label for="server">Web server:</label>
-            <select name="server" id="server">
-              <option value="" disabled selected>--Choose a server--</option>
-              <option value="apache">Apache</option>
-              <option value="nginx">Nginx</option>
-              <option value="iis">IIS</option>
-            </select>
-          </div>
+          <label for="city" class="city">City of<br />Employment:</label>
+          <input type="text" id="city" name="city" required />
+
+          <label for="server">Web server:</label>
+          <select name="server" id="server">
+            <option value="" disabled selected>--Choose a server--</option>
+            <option value="apache">Apache</option>
+            <option value="nginx">Nginx</option>
+            <option value="iis">IIS</option>
+          </select>
         </div>
-
+        <div class="clear"></div>
         <div class="your-role">
           <label for="admin">Please specify<br />your role:</label>
           <div class="role-list">
             <div>
               <input type="radio" id="admin" name="roles" value="admin" />
-              <label for="admin">Admin</label>
+              <span>Admin</span>
             </div>
 
             <div>
               <input type="radio" id="engineer" name="roles" value="engineer" />
-              <label for="engineer">Engineer</label>
+              <span>Engineer</span>
             </div>
 
             <div>
               <input type="radio" id="manager" name="roles" value="manager" />
-              <label for="manager">Manager</label>
+              <span>Manager</span>
             </div>
 
             <div>
               <input type="radio" id="guest" name="roles" value="guest" />
-              <label for="guest">Guest</label>
+              <span>Guest</span>
             </div>
           </div>
         </div>
@@ -65,12 +58,12 @@
           <div class="sso-list">
             <div>
               <input type="checkbox" id="mail" name="sso" value="Mail" />
-              <label for="mail">Mail</label>
+              <span>Mail</span>
             </div>
 
             <div>
               <input type="checkbox" id="payroll" name="sso" value="Payroll" />
-              <label for="payroll">Payroll</label>
+              <span>Payroll</span>
             </div>
 
             <div>
@@ -80,7 +73,7 @@
                 name="sso"
                 value="self-service"
               />
-              <label for="self-service">Self-service</label>
+              <span>Self-service</span>
             </div>
           </div>
         </div>

@@ -1,0 +1,71 @@
+.clear {
+  clear: both;
+}
+
+/* màu nền xám */
+fieldset {
+  background-color: lightgray;
+  margin-bottom: 40px;
+}
+/* di chuyển thẻ legend nằm trên fieldset,
+viết hoa chữ cái đầu và tô đậm */
+legend {
+  position: relative;
+  top: -8px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+label, input, select, span, textarea, progress {
+  display: block;
+  float: left;
+  
+}
+
+label {
+  width: 185px;
+  clear: left;
+  text-align: right;
+  margin-right: 16px;
+  padding-left: 50px;
+  margin-top: 4px;
+}
+
+#depression {
+  margin-top: 2px;
+}
+
+input,select {
+  height: 20px;
+  margin-bottom: 8px;
+}
+
+span {
+  width: 110px;
+  margin-top: 4px;
+}
+
+.gender > span {
+  width: 50px;
+}
+
+#height-cm {
+  width: 80px;
+}
+
+#weight {
+  accent-color: red;
+  width: 150px;
+}
+
+progress {
+  accent-color: green;
+  width: 100px;
+  margin-top: 4px;
+  margin-left: 2px;
+}
+
+#update {
+  accent-color: darkred;
+}

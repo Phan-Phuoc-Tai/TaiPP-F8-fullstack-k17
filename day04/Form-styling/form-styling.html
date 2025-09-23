@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Styling</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>thông tin cá nhân</legend>
+
+        <label for="depression">Tước vị:</label>
+        <select name="depression" id="depression">
+          <option value="mr">Ông</option>
+          <option value="ms">Bà</option>
+          <option value="bro">Anh</option>
+          <option value="sis">Chị</option>
+        </select>
+
+        <label for="full-name">Họ tên:</label>
+        <input type="text" name="full-name" id="full-name" />
+
+        <label for="birthday">Ngày sinh:</label>
+        <input type="date" name="birthday" id="birthday" />
+
+        <label for="birth-time">Giờ sinh:</label>
+        <input type="time" name="birth-time" id="birth-time" />
+
+        <label for="gender">Giới tính:</label>
+        <div class="gender">
+          <input type="radio" name="gender" id="gender" /><span>Nam</span>
+          <input type="radio" name="gender" id="gender" /><span>Nữ</span>
+        </div>
+
+        <label for="hobbies">Sở thích:</label>
+        <input type="checkbox" name="hobbies" id="hobbies" /><span
+          >Thể thao</span
+        >
+        <input type="checkbox" name="hobbies" id="hobbies" /><span
+          >Du Lịch</span
+        >
+        <input type="checkbox" name="hobbies" id="hobbies" /><span
+          >Ẩm Thực</span
+        >
+
+        <label for="hobbies">&NonBreakingSpace;</label>
+        <input type="checkbox" name="hobbies" id="hobbies" /><span
+          >Âm Nhạc</span
+        >
+        <input type="checkbox" name="hobbies" id="hobbies" /><span
+          >Học Ngoại Ngữ</span
+        >
+        <input type="checkbox" name="hobbies" id="hobbies" /><span
+          >Kinh Doanh</span
+        >
+      </fieldset>
+
+      <fieldset>
+        <legend>thông tin liên hệ</legend>
+
+        <label for="telephone">Điện thoại:</label>
+        <input type="tel" name="telephone" id="telephone" />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="ví dụ: billgate@apple.com"
+        />
+
+        <label for="web">Website</label>
+        <input type="text" name="web" id="web" />
+
+        <label for="code-province">Mã tỉnh:</label>
+        <input type="text" name="code-province" id="code-province" />
+
+        <label for="address">Địa chỉ</label>
+        <textarea name="address" id="address" rows="3" cols="50"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>chỉ số sức khỏe</legend>
+
+        <label for="height-cm">Chiều cao (cm):</label>
+        <input type="number" name="height-cm" id="height-cm" value="172" />
+
+        <label for="weight">Cân Nặng [45kg-100kg]:</label>
+        <input type="range" name="weight" id="weight" value="65" />
+
+        <label for="weight">Nhịp tim [60-100 nhịp/phút]:</label>
+        <progress value="80" max="100"></progress>
+      </fieldset>
+
+      <fieldset>
+        <legend>Giấy tờ cá nhân</legend>
+
+        <label for="documents">Tài liệu:</label>
+        <input type="file" name="documents" id="documents" />
+
+        <label for="update">Tải lên 30%:</label>
+        <progress value="30" max="100" name="update" id="update"></progress>
+      </fieldset>
+      <div class="clear"></div>
+    </form>
+  </body>
+</html>
