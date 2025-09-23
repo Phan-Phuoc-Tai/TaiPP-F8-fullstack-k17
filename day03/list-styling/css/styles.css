@@ -1,0 +1,13 @@
+
+.li-circle {
+  list-style-type: circle;
+}
+
+.li-square {
+  list-style-type: square;
+}
+
+.li-smile {
+  list-style-type: "😊 ";
+  padding-left: 64px;
+}
