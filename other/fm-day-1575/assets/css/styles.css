@@ -1,0 +1,173 @@
+/* common : Begin */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+button {
+  border-radius: 8px;
+  transition: all ease-in-out 0.5s;
+}
+
+/* common : End */
+
+
+.product-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 900px;
+  height: 660px;
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin: 100px auto;
+  padding: 82px;
+}
+
+.product-item {
+  width: 30%;
+  height: 40%;
+  margin-right: 32px;
+  background-image: url(../imgs/headphone-pink.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.product-contents {
+  width: 70%;
+  height: 100%;
+}
+
+/* product-contents__header : begin */
+.product-contents__header {
+  margin-bottom: 32px;
+}
+
+.product-contents__header p {
+  width:max-content;
+  padding: 4px 8px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background-color: #191847;
+  line-height: 100%;
+  color: #fff;
+  font-weight: 600;
+}
+
+.product-contents__header h2 {
+  margin: 0;
+  color: #191847;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 100%;
+
+}
+
+/* product-contents__header : end */
+
+/* product-contents__description : begin */
+.product-contents__description {
+  margin-bottom: 32px;
+}
+
+.product-contents__description p {
+  margin-bottom: 0;
+  line-height: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration:line-through;
+  color: #191847;
+}
+
+.product-contents__description h3 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 100%;
+  color: #191847;
+  margin: 16px 0;
+}
+
+.product-contents__description .sub_description {
+  color: #191847;
+  opacity: 0.6;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  text-decoration: none;
+}
+
+/* product-contents__description : end */
+
+/* product-contents__main-btn:begin */
+.product-contents__main-btn {
+  width: 100%;
+  margin-bottom: 32px;
+  padding: 16px;
+  background-color: #4788E9;
+  box-shadow: 0 5px 1px #1C57EE;
+  border: 1px solid #4788E9;
+  color: #fff;
+  font-size: 24px;
+  line-height: 100%;
+  
+}
+.product-contents__main-btn:hover {
+  opacity: 0.6;
+}
+
+/* product-contents__main-btn:end */
+
+/* oder_detail : begin */
+.order_detail {
+  margin-bottom: 32px;
+  padding: 3px 0;
+  color: #000;
+  line-height: 100%;
+}
+
+.order_detail .circle {
+  font-size: 13px;
+  color: #00D98B;
+}
+/* oder_detail : end */
+
+/* product-contents__sub-btn : begin */
+.product-contents__sub-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.product-contents__sub-btn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  width: 100%;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-weight: 400;
+}
+.product-contents__sub-btn button:hover {
+  opacity: 0.6;
+  background-color: #4788E9;
+  color: #fff
+}
+
+.product-contents__sub-btn .sub-btn__left {
+  margin-right: 16px;
+}
+
+.product-contents__sub-btn .icon {
+  font-size: 24px;
+  line-height: 100%;
+}
+/* product-contents__sub-btn : end */
+
