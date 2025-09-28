@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  color: #000;
+}
+main {
+  margin: 100px auto;
+  width: 1200px;
+  height: 600px;
+  background-image: url('../imgs/maxresdefault.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+
+div {
+  width: 33%;
+  height: 38%;
+  background-color: #a369c580;
+  margin-left: 40%;
+  margin-top: 10%;
+  border-radius: 4px;
+  box-shadow: -1px 5px 20px 0px #111;
+  text-align: center;
+  h3 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  p {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+}
