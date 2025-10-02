@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+button,
+label {
+  cursor: pointer;
+}
+.modal {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+
+.modal .overlay {
+  position: absolute;
+  inset: 0;
+  background: #33333370;
+}
+
+.modal .modal-inner {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  position: absolute;
+  top: 5%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #33333330;
+  z-index: 1;
+}
+
+.modal .modal-inner .modal-header {
+  margin-bottom: 16px;
+  border-bottom: 1px solid #333;
+}
+
+.modal .modal-inner .modal-header h2 {
+  display: inline-block;
+  padding-bottom: 12px;
+}
+
+.modal .modal-inner .modal-header .close-btn {
+  padding: 4px;
+  float: right;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.modal .modal-inner .modal-header .close-btn:hover {
+  color: red;
+  outline: 1px solid #ddd;
+}
+
+.modal .modal-inner .modal-header .close-btn::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+input:checked ~ .modal {
+  display: block;
+}

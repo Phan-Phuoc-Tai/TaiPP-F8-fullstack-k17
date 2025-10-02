@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.switch-toggle {
+  display: block;
+  width: 100px;
+  height: 40px;
+  margin: 30px auto;
+  background: gray;
+  border-radius: 99px;
+  position: relative;
+  overflow: hidden;
+}
+
+.switch-toggle p {
+  display: block;
+  height: 38px;
+  width: 38px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: left 0.4s ease;
+  z-index: 1;
+  cursor: pointer;
+}
+.switch-toggle .bg {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  transition: background 0.4 ease;
+  cursor: pointer;
+}
+.switch-toggle input:checked + p {
+  left: calc(100% - 39px);
+}
+
+.switch-toggle input:checked ~ .bg {
+  background: green;
+}

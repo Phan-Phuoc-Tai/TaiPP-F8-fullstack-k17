@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Lato", sans-serif;
+}
+
+form {
+  width: 600px;
+  height: 700px;
+  margin: 30px auto;
+  border: 1px solid #333;
+  padding: 20px 40px;
+}
+
+form .header-form {
+  margin-bottom: 28px;
+}
+
+.header-form h4 {
+  padding-bottom: 20px;
+  font-family: "Lobster", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.header-form p {
+  color: #33333376;
+}
+
+.header-form p span {
+  color: rgba(255, 0, 0, 0.6);
+}
+
+.form-item {
+  display: flex;
+  height: 40px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.form-item:hover .icon {
+  background: #000;
+}
+
+.form-item:hover p {
+  border: 2px solid #000;
+}
+
+.form-item .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid transparent;
+  background: #33333376;
+  color: #fff;
+}
+
+.form-item p {
+  height: 40px;
+  width: 100%;
+  border: 2px solid #33333376;
+  color: #33333376;
+  padding: 8px;
+}
+
+.form-item .sort {
+  position: absolute;
+  left: calc(100% - 30px);
+  background: none !important;
+  font-size: 1rem;
+  color: #33333376;
+}
+
+.form-item p span {
+  float: right;
+  font-size: 1rem;
+}
+
+.form-item p span::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.message .icon {
+  height: 120px;
+  align-items: flex-start;
+  padding-top: 8px;
+}
+
+.message p {
+  height: 120px;
+}
