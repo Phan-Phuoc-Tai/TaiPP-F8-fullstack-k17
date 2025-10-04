@@ -11,46 +11,63 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <form>
-      <header class="header-form">
+    <form class="form-contact">
+      <section class="form-header">
         <h4>Hey there</h4>
         <p>
           <span>We'd like to hear from you.</span> Send us your message or just
           say hy with our contact form directly via phone, we love to chat.
         </p>
-      </header>
+      </section>
       <!-- end header-form -->
 
-      <div class="form-item">
-        <i class="user outline icon"></i>
-        <p>Your name<span>&#9733;</span></p>
-      </div>
-      <!--end your-name-->
+      <section class="form-body">
+        <label class="form-item">
+          <input type="text" />
+          <i class="user outline icon"></i>
+          <p>Your name</p>
+          <span>Enter your name</span>
+          <!-- <span class="close-btn"></span> -->
+        </label>
+        <!--end your-name-->
 
-      <div class="form-item">
-        <i class="envelope outline icon"></i>
-        <p>your@domain.com<span>&#9733;</span></p>
-      </div>
-      <!--end your-email-->
+        <label class="form-item">
+          <input type="email" />
+          <i class="envelope outline icon"></i>
+          <p>your@domain.com</p>
+        </label>
+        <!--end your-email-->
 
-      <div class="form-item">
-        <i class="mobile alternate icon"></i>
-        <p>+44 00 123<span>&#9733;</span></p>
-      </div>
-      <!--end your-phone-->
+        <label class="form-item">
+          <input type="tel" />
+          <i class="mobile alternate icon"></i>
+          <p>+44 00 123</p>
+        </label>
+        <!--end your-phone-->
 
-      <div class="form-item">
-        <i class="book icon"></i>
-        <p>Subject</p>
-        <i class="sort icon"></i>
-      </div>
-      <!--end your-subject-->
+        <label class="form-item">
+          <input type="text" />
+          <i class="book icon"></i>
+          <p>Subject</p>
+        </label>
+        <!--end your-subject-->
 
-      <div class="form-item message">
-        <i class="comment outline icon"></i>
-        <p>Message<span>&#9733;</span></p>
-      </div>
-      <!--end your-message-->
+        <label class="form-item message">
+          <textarea name="" id=""></textarea>
+          <i class="comment outline icon"></i>
+          <p>Message</p>
+        </label>
+        <!--end your-message-->
+      </section>
+      <!--end .body-form-->
+      <section class="form-footer">
+        <label>
+          <input type="checkbox" hidden />
+          <span>Send me a copy of this message</span>
+        </label>
+        <button>Send</button>
+      </section>
+      <!-- end .form-footer -->
     </form>
   </body>
 </html>

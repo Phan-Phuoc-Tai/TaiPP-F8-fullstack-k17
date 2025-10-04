@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: gray;
 }
 
 html {
@@ -11,94 +12,221 @@ html {
   font-family: "Lato", sans-serif;
 }
 
-form {
-  width: 600px;
-  height: 700px;
-  margin: 30px auto;
-  border: 1px solid #333;
-  padding: 20px 40px;
+input,
+textarea {
+  border: none;
+  outline: none;
 }
 
-form .header-form {
-  margin-bottom: 28px;
+.form-contact {
+  width: 440px;
+  height: auto;
+  margin: 100px auto;
+  padding: 30px;
+  border: 1px solid #ccc;
 }
 
-.header-form h4 {
-  padding-bottom: 20px;
+.form-contact .form-header {
+  margin-bottom: 20px;
+}
+
+.form-contact .form-header h4 {
+  color: #333;
   font-family: "Lobster", sans-serif;
-  font-size: 2.8rem;
-  font-weight: 400;
-  letter-spacing: 1px;
+  font-size: 24px;
+  font-weight: 500;
 }
 
-.header-form p {
-  color: #33333376;
+.form-contact .form-header span {
+  color: red;
 }
 
-.header-form p span {
-  color: rgba(255, 0, 0, 0.6);
+.form-contact .form-body {
+  margin-bottom: 24px;
 }
 
-.form-item {
+.form-contact .form-body .form-item {
+  margin-bottom: 12px;
   display: flex;
-  height: 40px;
-  margin-bottom: 30px;
+  flex-direction: row-reverse;
   position: relative;
+  height: 40px;
 }
 
-.form-item:hover .icon {
-  background: #000;
+.form-contact .form-body .form-item input,
+.form-contact .form-body .form-item textarea {
+  border: 2px solid gray;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  transition: border 0.4s ease;
 }
 
-.form-item:hover p {
-  border: 2px solid #000;
-}
-
-.form-item .icon {
+.form-contact .form-body .form-item .icon {
   display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0;
   width: 40px;
-  height: 40px;
-  border: 2px solid transparent;
-  background: #33333376;
+  height: 100%;
+  border: 1px solid transparent;
+  background: gray;
   color: #fff;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10px;
+  transition: background 0.4s ease;
 }
 
-.form-item p {
-  height: 40px;
-  width: 100%;
-  border: 2px solid #33333376;
-  color: #33333376;
-  padding: 8px;
-}
-
-.form-item .sort {
+.form-contact .form-body .form-item p {
   position: absolute;
-  left: calc(100% - 30px);
-  background: none !important;
-  font-size: 1rem;
-  color: #33333376;
+  top: 10px;
+  left: 48px;
 }
 
-.form-item p span {
-  float: right;
-  font-size: 1rem;
+.form-contact .form-body .form-item:nth-child(1)::after,
+.form-contact .form-body .form-item:nth-child(2)::after,
+.form-contact .form-body .form-item:nth-child(5)::after {
+  content: "\2605";
+  display: block;
+  font-size: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: gray;
 }
 
-.form-item p span::after {
+.form-contact .form-body .form-item:nth-child(4)::before {
+  content: "\25B2"; /* ▲ là \25B2 */
+  display: block;
+  font-size: 8px;
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  color: gray;
+}
+
+.form-contact .form-body .form-item:nth-child(4)::after {
+  content: "\25BC"; /* ▼ là \25BC */
+  display: block;
+  font-size: 8px;
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  color: gray;
+}
+
+.form-contact .form-body .form-item:nth-child(4) p {
+  color: #333;
+}
+
+.form-contact .form-body .form-item:nth-child(5) {
+  height: 120px;
+}
+
+.form-contact .form-body .form-item:nth-child(1) span {
+  display: block;
+  padding: 8px;
+  background: #333;
+  color: #fff;
+  position: absolute;
+  top: -48px;
+  left: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease;
+  transition-property: opacity visibility;
+}
+
+.form-contact .form-body .form-item:nth-child(1) span::after {
   content: "";
   display: block;
-  clear: both;
+  border: 10px solid #333;
+  width: 15px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  position: absolute;
+  top: 36px;
+  left: 20px;
 }
 
-.message .icon {
-  height: 120px;
-  align-items: flex-start;
-  padding-top: 8px;
+.form-contact .form-body .form-item input:focus,
+.form-contact .form-body .form-item textarea:focus,
+.form-contact .form-body .form-item:hover input,
+.form-contact .form-body .form-item:hover textarea {
+  border: 2px solid #333;
 }
 
-.message p {
-  height: 120px;
+.form-contact .form-body .form-item input:focus ~ .icon,
+.form-contact .form-body .form-item textarea:focus ~ .icon,
+.form-contact .form-body .form-item:hover .icon {
+  background: #333;
+}
+
+.form-contact .form-body .form-item:nth-child(1) input:focus ~ span {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form-contact .form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+}
+
+.form-contact .form-footer button {
+  display: block;
+  padding-block: 4px;
+  padding-inline: 24px;
+  border: none;
+  background: red;
+  opacity: 0.68;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-contact .form-footer button:hover {
+  opacity: 1;
+}
+
+.form-contact .form-footer label {
+  margin: 0;
+  position: relative;
+  left: 30px;
+  cursor: pointer;
+}
+
+.form-contact .form-footer label span::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid gray;
+  position: absolute;
+  left: -30px;
+}
+
+.form-contact .form-footer label span::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 6px;
+  border: 2px solid #333;
+  border-width: 0 0 2px 2px;
+  rotate: -45deg;
+  position: absolute;
+  top: -8px;
+  left: -32px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease;
+  transition-property: top, left, opacity, visibility;
+}
+
+.form-contact .form-footer label input:checked ~ span::after {
+  top: 4px;
+  left: -24px;
+  opacity: 1;
+  visibility: visible;
 }
