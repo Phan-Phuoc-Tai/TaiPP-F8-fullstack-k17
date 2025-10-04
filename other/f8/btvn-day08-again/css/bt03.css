@@ -31,7 +31,7 @@ input {
 
 .box span {
   position: absolute;
-  top: 12px;
+  top: 10px;
   left: 10px;
   padding-inline: 2px;
   background: #fff;
