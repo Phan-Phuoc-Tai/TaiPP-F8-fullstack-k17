@@ -123,7 +123,7 @@ a {
 }
 .container .container-info .btn-change label a {
   display: block;
-  padding: 17px 2px;
+  padding: 17px 0px;
   width: 100%;
   height: 100%;
   font-size: 1.6rem;
@@ -146,7 +146,7 @@ a {
   width: 484px;
   height: 100%;
   position: absolute;
-  right: 14%;
+  right: 13%;
   top: -10%;
 }
 
@@ -159,7 +159,7 @@ a {
   box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
   padding: 64px;
   position: absolute;
-  top: 32%;
+  top: 28%;
 
   transition: 0.4s ease;
   transition-property: padding, width;
@@ -167,8 +167,8 @@ a {
 
 .container .container-form .form-box .form-box-decorate {
   position: absolute;
-  top: -12%;
-  left: -16%;
+  top: -2%;
+  left: -17%;
 }
 
 .container .container-form .form-box .form-box-decorate img {
@@ -202,8 +202,8 @@ a {
   position: absolute;
   top: 18px;
   left: 20px;
-
   background-color: #fff;
+
   transition: 0.4s ease;
   transition-property: top, font-size;
 }
@@ -333,27 +333,6 @@ a {
   visibility: visible;
 }
 
-.container
-  .container-form
-  .form-box
-  .form-items-list
-  .form-actions-list
-  .form-action
-  a {
-  color: #adafca;
-  font-weight: 700;
-}
-
-.container
-  .container-form
-  .form-box
-  .form-items-list
-  .form-actions-list
-  .form-action
-  a:hover {
-  color: #23d2e2;
-}
-
 .container .container-form .form-box .form-button {
   margin-top: 32px;
   width: 100%;
@@ -368,90 +347,30 @@ a {
 }
 
 .container .container-form .form-box .login-btn {
-  background-color: #615dfa;
-  box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+  background-color: #23d2e2;
+  box-shadow: 4px 7px 12px 0 rgba(35, 210, 226, 0.2);
   transition: background 0.4s ease;
 }
 
 .container .container-form .form-box .login-btn:hover {
-  background-color: #5753e4;
+  background-color: #1bc5d4;
   box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
 }
 
 .container-form .form-box .form-text {
   display: inline-block;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 30px;
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
+  line-height: 2.4rem;
   position: relative;
   color: #3e3f5e;
 }
 
-.container-form .form-box .form-text::before {
-  content: "";
-  display: inline-block;
-  width: 70px;
-  height: 1px;
-  background-color: #eaeaf5;
-  position: absolute;
-  top: 8px;
-  left: 0;
+.container-form .form-box .form-text a {
+  color: #00c7d9;
+  font-weight: 600;
 }
-
-.container-form .form-box .form-text::after {
-  content: "";
-  display: inline-block;
-  width: 70px;
-  height: 1px;
-  background-color: #eaeaf5;
-  position: absolute;
-  top: 8px;
-  right: 0;
-}
-
-.container-form .form-box .social-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-}
-
-.container-form .form-box .social-links .social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  margin-right: 12px;
-  color: #fff;
-  font-size: 1.2rem;
-  user-select: none;
-  pointer-events: visible;
-  translate: 0 0;
-  transition: translate 0.4s ease;
-}
-
-.container-form .form-box .social-links .social-link:hover {
-  translate: 0 -6px;
-}
-
-.container-form .form-box .social-links .fa-square-facebook {
-  background-color: #3763d2;
-}
-
-.container-form .form-box .social-links .fa-twitter {
-  background-color: #1abcff;
-}
-
-.container-form .form-box .social-links .fa-twitch {
-  background-color: #7b5dfa;
-}
-
-.container-form .form-box .social-links .fa-youtube {
-  background-color: #fd434f;
-}
-
 /* container-form : end */
