@@ -317,7 +317,7 @@ a {
   .form-items-list
   .form-actions-list
   .form-action
-  #login-remember:checked
+  #register-member:checked
   ~ label::before {
   background: #23d2e2;
 }
@@ -327,7 +327,7 @@ a {
   .form-items-list
   .form-actions-list
   .form-action
-  #login-remember:checked
+  #register-member:checked
   ~ label::after {
   opacity: 1;
   visibility: visible;
