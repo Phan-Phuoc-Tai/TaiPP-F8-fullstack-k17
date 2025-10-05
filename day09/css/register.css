@@ -346,13 +346,13 @@ a {
   cursor: pointer;
 }
 
-.container .container-form .form-box .login-btn {
+.container .container-form .form-box .register-btn {
   background-color: #23d2e2;
   box-shadow: 4px 7px 12px 0 rgba(35, 210, 226, 0.2);
   transition: background 0.4s ease;
 }
 
-.container .container-form .form-box .login-btn:hover {
+.container .container-form .form-box .register-btn:hover {
   background-color: #1bc5d4;
 }
 
