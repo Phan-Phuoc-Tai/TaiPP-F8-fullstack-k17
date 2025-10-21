@@ -1,0 +1,91 @@
+#news-promotions {
+  margin-top: 0.55rem;
+}
+
+#news-promotions .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  cursor: pointer;
+}
+
+#news-promotions .title h2 a {
+  color: #323232;
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: normal;
+}
+
+#news-promotions .title .arrow-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: 1.2rem;
+  border-radius: 50%;
+  background: #ffece5;
+  color: #ed5b1f;
+  font-size: 1.17rem;
+  user-select: none;
+  transition: 0.4s ease;
+  transition-property: background color;
+}
+
+#news-promotions .title .arrow-icon:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+#news-promotions .title .all-new a {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+#news-promotions .title .all-new .arrow-icon {
+  font-weight: 700;
+  font-size: 1.17rem;
+}
+
+#news-promotions .title .all-new a:hover,
+#news-promotions .title .all-new a:focus {
+  text-decoration: underline;
+}
+
+#news-promotions .row:nth-child(2) {
+  display: none;
+}
+
+/* title: end */
+#news-promotions .posts {
+  margin-top: -0.4rem;
+}
+
+#news-promotions .posts .post-item {
+  padding: 2.3rem;
+  border: 0.1rem solid #ededed;
+  border-radius: 2rem;
+}
+
+#news-promotions .posts .post-item .post-image {
+  user-select: none;
+}
+
+#news-promotions .posts .post-item .post-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#news-promotions .posts .post-item .post-title {
+  margin-top: 2.1rem;
+  padding-bottom: 1.9rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5525rem;
+  line-height: normal;
+}
+
+#news-promotions .posts .post-item:hover {
+  border: 0.1rem solid var(--primary-color);
+}

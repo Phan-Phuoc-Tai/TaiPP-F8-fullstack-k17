@@ -1,0 +1,113 @@
+.block-category {
+  position: relative;
+  top: 18.9rem;
+  left: 0;
+  right: 0;
+  margin-top: 4rem;
+}
+.block-category .block-category-inner {
+  --column-space: 3.4rem;
+}
+.block-category .block-category-inner .col-4 {
+  margin-bottom: 0;
+}
+.block-category .block-category-inner .blocks-list {
+  padding-top: 1.5rem;
+  padding-inline: 1.6rem;
+  border: 0.1rem solid #f2f2f2;
+  border-radius: 2rem;
+  background: #fff;
+}
+
+.block-category .block-category-inner .blocks-list .block-heading {
+  padding: 1.2rem 1.7rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1rem;
+  background: var(--secondary-color);
+}
+
+.block-category .block-category-inner .block-heading h3 a {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.block-category .block-category-inner .block-heading [class*="fa-arrow-"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  background: #fff;
+  color: #ed5b1f;
+  cursor: pointer;
+}
+
+.block-category .block-category-inner .block-heading .fa-arrow-left {
+  background: var(--primary-color);
+  color: #fff;
+  margin-inline: 0.5rem;
+}
+
+.block-category .block-category-inner .blocks-list .block-item {
+  padding-inline: 0.5rem;
+  display: flex;
+  gap: 1.2rem;
+  padding-bottom: 3.6rem;
+}
+
+.block-category .block-category-inner .blocks-list .block-item .item-body h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.block-category
+  .block-category-inner
+  .blocks-list
+  .block-item
+  .item-body
+  .price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  line-height: 1.3;
+  padding-block: 0.3rem;
+}
+
+.block-category
+  .block-category-inner
+  .blocks-list
+  .block-item
+  .item-body
+  .vote {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #3e3e3e;
+}
+
+.block-category
+  .block-category-inner
+  .blocks-list
+  .block-item
+  .item-body
+  .vote
+  .fa-star {
+  color: var(--primary-color);
+}
+
+.block-category
+  .block-category-inner
+  .blocks-list
+  .block-item
+  .item-body
+  .vote
+  span {
+  font-weight: 500;
+  color: #787777;
+}

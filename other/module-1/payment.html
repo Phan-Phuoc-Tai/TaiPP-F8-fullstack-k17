@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Payment</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo/logo-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/grid.css" />
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/payment/header-acc.css" />
+    <link rel="stylesheet" href="./assets/css/payment/payment-onl.css" />
+    <link rel="stylesheet" href="./assets/css/payment/responsive.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="row heading">
+            <!-- menu-mobile -->
+            <div class="col-sm-6">
+              <div class="image">
+                <a href="#!"
+                  ><img
+                    src="./assets/images/icon-svg/subway_menu.svg"
+                    alt="menu icon"
+                /></a>
+              </div>
+              <!--end .image-->
+            </div>
+            <div class="col-sm-6">
+              <div class="contact">
+                <a href="tel:1920010800">Hotline: 19200 10800</a>
+              </div>
+              <!--end .contact-->
+            </div>
+            <!-- menu-mobile:end -->
+          </div>
+          <!--end .row-->
+          <div class="row navigation">
+            <div class="col-sm-12">
+              <div class="heading-icon-mb">
+                <i class="heading-icon menu-icon fa-solid fa-bars"></i>
+                <i class="heading-icon fa-solid fa-magnifying-glass"></i>
+                <i class="heading-icon fa-solid fa-user"></i>
+              </div>
+            </div>
+          </div>
+          <!--end .row-->
+        </div>
+        <!--end .header-inner-->
+      </div>
+      <!--end .container-->
+    </header>
+    <!--end .header-->
+    <main class="payment">
+      <div class="container">
+        <div class="payment-inner">
+          <div class="row">
+            <div class="col-12">
+              <div class="payment-space">
+                <h1>ONLINE PAYMENT</h1>
+                <form action="push">
+                  <fieldset class="payment-info">
+                    <h2>Thông tin vận chuyển và thanh toán</h2>
+                    <div class="name">
+                      <label>
+                        <span>Tên</span>
+                        <input type="text" placeholder="TaiPhan" required />
+                      </label>
+                    </div>
+                    <div class="email">
+                      <label>
+                        <span>Email</span>
+                        <input
+                          type="email"
+                          required
+                          placeholder="taippf8@fullstack.edu.vn"
+                        />
+                      </label>
+                    </div>
+                  </fieldset>
+
+                  <fieldset class="payment-card">
+                    <h2>Thông tin thanh toán</h2>
+                    <div class="card-number">
+                      <label>
+                        <span>Số thẻ</span>
+                        <input
+                          type="number"
+                          placeholder="Card number"
+                          inputmode="numeric"
+                          required
+                        />
+                        <img
+                          src="./assets/images/payment-onl/mingcute_bank-card-line.svg"
+                          alt="bank card icon"
+                        />
+                      </label>
+                    </div>
+                    <div class="date">
+                      <label>
+                        <span>Hết hạn</span>
+                        <input type="text" placeholder="MM/YY" />
+                      </label>
+                    </div>
+                    <div class="code">
+                      <label>
+                        <span>Cvc</span>
+                        <input
+                          type="number"
+                          placeholder="XXX"
+                          inputmode="numeric"
+                          required
+                        />
+                      </label>
+                    </div>
+                  </fieldset>
+                  <button type="submit">Thanh toán</button>
+                  <button type="reset">Hủy bỏ</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- end .payment-->
+  </body>
+</html>

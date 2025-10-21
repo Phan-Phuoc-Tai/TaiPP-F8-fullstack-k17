@@ -117,10 +117,12 @@ a {
   overflow: hidden;
   transition: width 0.4s ease;
 }
+
 .container .container-info .btn-change label {
   width: 50%;
   text-align: center;
 }
+
 .container .container-info .btn-change label a {
   display: block;
   padding: 17px 2px;
@@ -202,10 +204,10 @@ a {
   position: absolute;
   top: 18px;
   left: 20px;
-
   background-color: #fff;
   transition: 0.4s ease;
   transition-property: top, font-size;
+  cursor: text;
 }
 
 .container .container-form .form-box .form-items-list .form-item input {
@@ -415,16 +417,18 @@ a {
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+  gap: 12px;
 }
 
 .container-form .form-box .social-links .social-link {
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  margin-right: 12px;
+
   color: #fff;
   font-size: 1.2rem;
   user-select: none;

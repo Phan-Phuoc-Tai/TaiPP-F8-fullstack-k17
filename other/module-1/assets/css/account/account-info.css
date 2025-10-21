@@ -1,0 +1,306 @@
+.account-info {
+  position: relative;
+  top: 15.05rem;
+  margin-bottom: 3.1rem;
+}
+
+.account-info .account-info-inner .theme {
+  background: #fff4f1;
+}
+
+.account-info .account-info-inner .information {
+  margin-top: -2.9rem;
+  border: 0.1rem solid #e5e5e5;
+  border-radius: 2rem;
+  padding: 5.8rem 3.5rem;
+  background: #fff;
+}
+
+.account-info .account-info-inner .avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 2.4rem;
+}
+
+.account-info .account-info-inner .avatar img {
+  width: 17.2rem;
+  height: 17.2rem;
+  object-fit: cover;
+}
+
+.account-info .account-info-inner .avatar .camera-icon {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.6rem;
+  background: var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 50%;
+  border: 0.2rem solid #fff;
+  position: absolute;
+  bottom: 0.3rem;
+  right: 8.2rem;
+}
+
+.account-info .account-info-inner .name {
+  padding-bottom: 2.8rem;
+  border-bottom: 0.1rem dashed #e5e5e5;
+  position: relative;
+}
+
+.account-info .account-info-inner .name span {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background: #e5e5e5;
+  border-radius: 50%;
+}
+
+.account-info .account-info-inner .name .circle-left {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+}
+
+.account-info .account-info-inner .name .circle-right {
+  position: absolute;
+  bottom: -0.5rem;
+
+  right: 0;
+}
+
+.account-info .account-info-inner .name h3 {
+  text-align: center;
+
+  margin-bottom: 0.8rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #323232;
+}
+
+.account-info .account-info-inner .name p {
+  text-align: center;
+  width: max-content;
+  margin: auto;
+  padding: 0.4rem 1.2rem;
+  border-radius: 10rem;
+  background: #ffdbce;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #323232;
+}
+
+.account-info .account-info-inner .about-other {
+  margin-top: 4.2rem;
+  padding-bottom: 13rem;
+}
+
+.account-info .account-info-inner .about-other h4 {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  max-width: 25.9rem;
+  font-size: 1.6rem;
+  user-select: none;
+}
+.account-info .account-info-inner .about-other h4 img {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.account-info .account-info-inner .about-other h4:nth-child(4),
+.account-info .account-info-inner .about-other h4:nth-child(5) {
+  display: none;
+}
+
+.account-info .account-info-inner .about-other h4:hover {
+  background: #fff4f1;
+  color: var(--primary-color);
+}
+
+.account-info .account-info-inner .about-other h4:hover a {
+  color: var(--primary-color);
+}
+
+.account-info .account-info-inner .about-other h4 a {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #454545;
+  user-select: none;
+}
+
+.account-info .account-info-inner .account-overview {
+  margin-top: -2.9rem;
+  border: 0.1rem solid #e5e5e5;
+  border-radius: 2rem;
+  padding: 4.7rem 2.9rem 42.06rem;
+  background: #fff;
+}
+
+.account-info .account-info-inner .account-overview h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #323232;
+  line-height: 1.3;
+}
+
+.account-info .account-info-inner .title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #353535;
+}
+
+.account-info .account-info-inner .current {
+  padding: 1.8rem 2rem;
+  border: 0.1rem solid #e5e5e5;
+  border-radius: 2rem;
+}
+
+.account-info .account-info-inner .title {
+  padding-bottom: 2.5rem;
+  border-bottom: 0.1rem dashed #e5e5e5;
+  position: relative;
+}
+
+.account-info .account-info-inner .title span {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background: #e5e5e5;
+  border-radius: 50%;
+}
+
+.account-info .account-info-inner .title .circle-left {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+}
+
+.account-info .account-info-inner .title .circle-right {
+  position: absolute;
+  bottom: -0.5rem;
+  right: 0;
+}
+
+.account-info .account-info-inner .current .amount {
+  margin-top: 4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+
+.account-info .account-info-inner .current .amount span {
+  margin-right: auto;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.account-info .account-info-inner .current .recharge {
+  padding: 0.4rem 1.2rem;
+  border-radius: 10rem;
+  background: #ffdbce;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #323232;
+}
+
+.account-info .account-info-inner .history-purchase {
+  padding: 1.8rem 2.6rem;
+  border: 0.1rem solid #e5e5e5;
+  border-radius: 2rem;
+}
+
+.account-info .account-info-inner .history-purchase .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 5.2rem;
+  border-bottom: 0;
+}
+
+.account-info .account-info-inner .history-purchase .title .more {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: rgba(127, 127, 127, 0.5);
+}
+.account-info .account-info-inner .history-purchase [class*="circle-"] {
+  display: none;
+}
+.account-info .account-info-inner .history-purchase .title .more span {
+  display: inline;
+  background: none;
+}
+.account-info .account-info-inner .history-purchase .quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.account-info .account-info-inner .history-purchase .quantity p {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.account-info .account-info-inner .history-purchase .quantity span {
+  text-align: center;
+  color: #454545;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.account-info .account-info-inner .about-account {
+  padding: 2.5rem 3.3rem 2.7rem;
+  border: 0.1rem solid #e5e5e5;
+  border-radius: 2rem;
+}
+
+.account-info .account-info-inner .about-account .title {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 3.1rem;
+}
+
+.account-info .account-info-inner .about-account .info h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #323232;
+}
+
+.account-info .account-info-inner .about-account .info p,
+.account-info .account-info-inner .about-account .email-contact a {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000;
+}
+
+.account-info .account-info-inner .about-account .email-contact {
+  padding-top: 2.2rem;
+}
+
+.account-info .account-info-inner .about-account .email-contact i {
+  font-size: 1.2rem;
+}
+
+.account-info .account-info-inner .account-overview .col-sm-12:nth-child(3),
+.account-info .account-info-inner .account-overview .col-sm-12:nth-child(4) {
+  display: none;
+}

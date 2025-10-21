@@ -1,0 +1,114 @@
+.footer {
+  position: relative;
+  top: 15.05rem;
+  left: 0;
+  right: 0;
+  padding-top: 6.1rem;
+  border-top: 0.1rem solid #ddd;
+}
+
+.footer .footer-inner .info-block {
+  background: #fff;
+}
+.footer .footer-inner .col-3 {
+  margin-bottom: 7rem;
+}
+.footer .footer-inner h3 {
+  margin-bottom: 1.6rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.footer .footer-inner li a {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 0.9rem 0;
+}
+
+.footer .footer-inner li:hover {
+  text-decoration: underline;
+}
+
+.footer .footer-inner .payment-block .payment-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  width: 21.2rem;
+  height: 4.7rem;
+  margin-bottom: 0.6rem;
+}
+
+.footer .footer-inner .payment-block .payment-list li a {
+  padding: 1rem;
+  background: #fff;
+  border: 0.1rem solid #f2f2f2;
+}
+
+.footer .footer-inner .payment-block .payment-list li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer .footer-inner .social-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 1rem;
+}
+
+.footer .footer-inner .social-block .social-list li {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.footer .footer-inner .social-block .social-list li a {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.footer .footer-inner .social-block .social-list li img {
+  height: 2.4rem;
+  width: 2.4rem;
+  object-fit: cover;
+}
+.footer .footer-inner .company h3,
+.footer .footer-inner .certification h3 {
+  margin-bottom: 1.4rem;
+}
+.footer .footer-inner .company p a {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.footer .footer-inner .certification .certification-image {
+  display: flex;
+  gap: 3.5rem;
+}
+
+.footer .footer-inner .col-12 {
+  margin-bottom: 1rem;
+}
+
+.footer .footer-inner .copyright {
+  margin-top: 0.6rem;
+  padding-block: 1.4rem;
+  background: var(--secondary-color);
+  box-shadow: 1000px 0 var(--secondary-color), -1000px 0 var(--secondary-color);
+  text-align: center;
+}
+
+.footer .footer-inner .copyright span {
+  font-size: 1.5rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: #909090;
+}

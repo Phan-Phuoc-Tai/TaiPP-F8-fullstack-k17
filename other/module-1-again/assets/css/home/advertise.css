@@ -1,0 +1,102 @@
+.advertise {
+  margin-top: 1.6rem;
+}
+
+.advertise .image {
+  user-select: none;
+}
+
+.advertise .content .content-title {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #f2f2f2;
+  line-height: normal;
+}
+
+.advertise .content .content-description {
+  margin-top: 1.4rem;
+  color: #fff;
+}
+
+.advertise .content .view-all-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 1.6rem;
+  margin-inline: auto;
+  max-width: max-content;
+  padding: 0.65rem 3.3rem;
+  background: #f5f6f8;
+  border: 0.1rem solid var(--primary-color);
+  border-radius: 10rem;
+  transition: background 0.4s ease;
+  user-select: none;
+}
+
+.advertise .content .view-all-btn a {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.advertise .content .view-all-btn i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.44rem;
+  height: 1.44rem;
+  border-radius: 50%;
+  background: #ffece5;
+  margin-left: 1rem;
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+.advertise .content .view-all-btn:hover {
+  background: var(--primary-color);
+  border: 0.1rem solid var(--secondary-color);
+}
+
+.advertise .content .view-all-btn:hover a {
+  color: #fff;
+}
+
+.advertise .content .view-all-btn:hover i {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.advertise .advertise-discount {
+  background: linear-gradient(
+    to right,
+    #ff9873 0%,
+    #f0612d 40%,
+    var(--primary-color) 50%
+  );
+  border-radius: 3rem;
+  position: relative;
+}
+
+.advertise .advertise-discount .content {
+  position: absolute;
+  top: 8.1rem;
+  left: 11rem;
+  bottom: 6.1rem;
+  max-width: 36.9rem;
+  text-align: center;
+}
+
+.advertise .advertise-gift {
+  background: #782000;
+  border-radius: 3rem;
+  margin-bottom: 3.3rem;
+  position: relative;
+}
+
+.advertise .advertise-gift .content {
+  position: absolute;
+  top: 8.1rem;
+  left: 11rem;
+  bottom: 6.1rem;
+  max-width: 36.9rem;
+  text-align: center;
+}

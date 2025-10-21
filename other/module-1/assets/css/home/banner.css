@@ -1,0 +1,225 @@
+.banner {
+  position: relative;
+  top: 18.9rem;
+  left: 0;
+  right: 0;
+  margin-top: 2rem;
+}
+.banner .banner-inner {
+  --col-total: 10;
+}
+
+.banner .banner-inner .banner-main {
+  display: flex;
+  justify-content: flex-end;
+  background: #ffdbce;
+  border-radius: 2rem;
+  padding-block: 6.25rem;
+}
+
+.banner .banner-inner .content {
+  display: none;
+  padding-bottom: 4.7rem;
+  text-align: center;
+}
+.banner .banner-inner .content h3 a {
+  color: #323232;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.banner .banner-inner .content p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #323232;
+  margin-block: 1.2rem;
+}
+
+.banner .banner-inner .content .view-all-btn {
+  padding: 0.8rem 3.3rem;
+  border: 0.1rem solid var(--primary-color);
+  border-radius: 10rem;
+  background: var(--primary-color);
+  margin-top: 1.1rem;
+}
+.banner .banner-inner .banner-sub .content {
+  text-align: left;
+}
+.banner .banner-inner .banner-sub .content h3 a {
+  color: #323232;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.banner .banner-inner .banner-sub .content .view-all-btn {
+  padding: 0.3rem 0.4rem;
+  border: 0.1rem solid var(--primary-color);
+  border-radius: 10rem;
+  background: var(--primary-color);
+}
+
+.banner .banner-inner .content .view-all-btn a {
+  font-size: 0.96rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.banner .banner-inner .content .view-all-btn a {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.banner .banner-inner .view-all-btn .fa-arrow-right {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background: #ffece5;
+  color: #ed5a25;
+  font-size: 1rem;
+}
+
+.banner .banner-inner .banner-service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-block: 1.6rem;
+}
+
+.banner .banner-inner .banner-service .refund-icon {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner .banner-inner .banner-service h3 {
+  font-size: 1.8rem;
+  color: #3e3e3e;
+  font-weight: 600;
+  margin-top: 1.2rem;
+}
+
+/* .banner .banner-inner {
+  --col-total: 10;
+}
+
+.banner .banner-inner .banner-info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffdbce;
+  border-radius: 20px;
+}
+
+.banner .banner-inner .banner-info-item .image {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.banner .banner-inner .banner-info-item .content {
+  display: none;
+  padding-bottom: 4.7rem;
+}
+.banner .banner-inner .banner-info-item .content h3 a {
+  color: #323232;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.banner .banner-inner .banner-info-item .content p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #323232;
+  margin-block: 1.2rem;
+}
+
+.banner .banner-inner .banner-info-item .content .view-all-btn {
+  padding: 8px 33px;
+  border: 1px solid var(--primary-color);
+  border-radius: 100px;
+  background: #f5f6f8;
+}
+
+.banner .banner-inner .banner-info-item .view-all-btn:hover {
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+.banner .banner-inner .banner-info-item .view-all-btn:hover a {
+  color: #f2f2f2;
+}
+
+.banner .banner-inner .banner-info-item .content .view-all-btn a {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #ed5a25;
+}
+
+.banner .banner-inner .banner-info-item .view-all-btn .fa-arrow-right {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffece5;
+  color: #ed5a25;
+  font-size: 10px;
+}
+
+.banner .banner-inner .service {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  --column-space: 30px;
+}
+
+.banner .banner-inner .service .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner .banner-inner .service .item .refund-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner .banner-inner .service .item h3 {
+  font-size: 1.8rem;
+  color: #3e3e3e;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.banner .banner-inner .banner-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  --column-space: 46px;
+  margin-top: 40px;
+} */
+
+/* .banner : end */

@@ -1,0 +1,180 @@
+.collection .collection-inner .navigation {
+  margin-top: 1.7rem;
+  display: none;
+}
+
+.collection .collection-inner .navigation .nav-menu-icon {
+  background: var(--primary-color);
+  padding: 0.6rem 1.7rem 0.3rem;
+  border-radius: 10rem;
+}
+.collection .collection-inner .navigation .nav-menu-icon .line {
+  display: block;
+  width: 2.1rem;
+  height: 0.3rem;
+  background: #fff;
+  border-radius: 10rem;
+  margin-bottom: 0.3rem;
+}
+
+.collection .collection-inner .navigation .nav-menu-icon .line-80 {
+  width: 80%;
+}
+
+.collection .collection-inner .navigation .nav-menu-icon .line-60 {
+  width: 60%;
+}
+
+.collection .collection-inner .product-show {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.3rem;
+  margin-bottom: 2.4rem;
+  padding-left: 1.2rem;
+}
+
+.collection .collection-inner .product-show p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: "Manrope", sans-serif;
+  color: #323232;
+}
+.collection .collection-inner .product-show .sort-btn {
+  display: none;
+  border: 0.1rem solid #e5e5e5;
+  padding: 0.68rem 1rem;
+  font-size: 1.1rem;
+}
+
+.collection .collection-inner .product-show .sort-btn i {
+  color: #aeaeae;
+  margin-left: 0.8rem;
+}
+
+.collection .collection-inner .product-item .card-body .shopping-btn {
+  padding-block: 0.7rem;
+  margin-top: 1.2rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.4s ease;
+}
+
+.collection .collection-inner .product-item .card-body .shopping-btn:hover {
+  background: var(--primary-color);
+  color: var(--text-white);
+}
+
+.collection .collection-inner .col-3:hover .product-item {
+  border: 0.1rem solid #ffdbce;
+  outline: 0.1rem solid #ffdbce;
+  cursor: pointer;
+}
+
+.collection .collection-inner .col-3:hover .favorite {
+  opacity: 0;
+}
+
+.collection .collection-inner .product-item {
+  border: 0.1rem solid var(--border-color);
+  border-radius: 3rem;
+  padding: 1.2rem 1.1rem 1.3rem;
+  position: relative;
+}
+
+.collection .collection-inner .product-item .image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.collection .collection-inner .product-item .favorite {
+  position: absolute;
+  top: 2.4rem;
+  right: 2.1rem;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+}
+
+.collection .collection-inner .product-item .favorite img {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: cover;
+}
+
+.collection .collection-inner .product-item .card-body {
+  margin-top: 1.2rem;
+  padding-left: 0.8rem;
+}
+
+.collection .collection-inner .product-item .card-body h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+}
+
+.collection .collection-inner .product-item .card-body p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  line-height: 1.3;
+  margin-top: 0.8rem;
+}
+.collection .collection-inner .product-item .card-body span {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+.collection .collection-inner .location-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.3rem;
+  margin-top: 13rem;
+  margin-bottom: 10.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.collection .collection-inner .location-list [class*="fa-arrow-"] {
+  font-size: 2rem;
+  color: #787777;
+  background: #fff;
+}
+.collection .collection-inner .location-list a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+  color: #787777;
+  background: #ededed;
+  font-size: 2.5rem;
+  user-select: none;
+}
+
+.collection .collection-inner .location-list a:nth-child(2) {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.collection .collection-inner .location-list a:hover {
+  text-decoration: underline;
+}
+
+.collection .collection-inner .location-list [class*="fa-arrow-"]:hover {
+  color: var(--primary-color);
+  background: none;
+  text-decoration: none;
+}
+
+.collection .collection-inner .adv-mobile {
+  display: none;
+}
+
+.collection .collection-inner .adv-mobile .advertise {
+  padding: 2.3rem 1.4rem 5.3rem;
+  margin-bottom: 2.8rem;
+}

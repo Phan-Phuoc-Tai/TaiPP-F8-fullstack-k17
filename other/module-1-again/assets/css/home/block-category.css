@@ -1,0 +1,124 @@
+#block-category {
+  margin-top: 1.6rem;
+  --column-space: 3.45rem;
+}
+
+#block-category .block-list {
+  padding: 1.6rem 1.5rem 0;
+  border: 0.1rem solid #f2f2f2;
+  border-radius: 2rem;
+}
+
+#block-category .block-list:hover {
+  border: 0.1rem solid var(--primary-color);
+}
+
+#block-category .block-list .block-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.7rem;
+  background: var(--secondary-color);
+  border-radius: 1rem;
+  user-select: none;
+}
+
+#block-category .block-list .block-title h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #404040;
+}
+
+#block-category .block-list .block-title .other {
+  cursor: pointer;
+  user-select: none;
+}
+
+#block-category .block-list .block-title .other .arrow-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  background: #fff;
+  color: #ed5b1f;
+  transition: 0.4s ease;
+  transition-property: background color;
+}
+
+#block-category .block-list .block-title .other .arrow-icon:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* .block-title : end */
+#block-category .block-list .block-body {
+  margin-top: 2.5rem;
+  margin-inline: 0.5rem;
+}
+
+#block-category .block-list .block-body .block-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 3.6rem;
+  border: 0.1rem solid transparent;
+  border-radius: 1.3rem;
+}
+
+#block-category .block-list .block-body .block-item .block-image {
+  user-select: none;
+}
+
+#block-category .block-list .block-body .block-item .block-content h3 a {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5525rem;
+  font-weight: 500;
+  line-height: normal;
+  color: #000;
+}
+
+#block-category .block-list .block-body .block-item .block-content p {
+  font-size: 1.5525rem;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--primary-color);
+}
+
+#block-category .block-list .block-body .block-item .block-content .rate {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+#block-category .block-list .block-body .block-item .block-content .rate i {
+  display: inline-block;
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+#block-category .block-list .block-body .block-item .block-content .rate span {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #3e3e3e;
+}
+
+#block-category
+  .block-list
+  .block-body
+  .block-item
+  .block-content
+  .rate
+  span
+  > span {
+  color: #787777;
+}
+
+#block-category .block-list .block-body .block-item:hover {
+  border: 0.1rem solid var(--primary-color);
+  cursor: pointer;
+}

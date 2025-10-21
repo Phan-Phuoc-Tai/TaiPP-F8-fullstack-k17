@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
+
+:root {
+  --primary-color: #ed5a25;
+  --secondary-color: #fff4f1;
+  --text-gray: #aeaeae;
+  --text-white: #fff;
+  --border-color: #f2f2f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.4rem;
+  color: #333;
+  line-height: 1.5;
+  position: relative;
+  inset: 0;
+}
+
+input {
+  font-family: Quicksand, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.icon-white-color {
+  color: #fff;
+}
+
+.icon-primary-color {
+  color: var(--primary-color);
+}
+
+.icon-gray-color {
+  color: #e5e5e5;
+}
+
+.icon-primary-bg {
+  background: var(--primary-color);
+}
+
+.icon-gray-bg {
+  background: #e5e5e5;
+}
+
+.shopping-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding-block: 10px;
+  border-radius: 129px;
+  color: var(--primary-color);
+  background: var(--secondary-color);
+}
+
+.favorite {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
