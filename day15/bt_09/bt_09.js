@@ -34,7 +34,7 @@ if (kwhConsume > 0) {
       maxRank_3 +
       maxRank_4 +
       (kwhConsume - KWH_4) * PRICE_5;
-    if (kwhConsume > 400) {
+    if (kwhConsume > KWH_5) {
       total =
         maxRank_1 +
         maxRank_2 +
