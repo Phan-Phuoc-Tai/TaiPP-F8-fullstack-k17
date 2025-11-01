@@ -7,14 +7,23 @@
 */
 
 function getTotal(n) {
+  // let sum = 0;
+  // let tmp = 1;
+  //   if (n % 1 !== 0) {
+  //     return `Số ${n}: không phải là số nguyên`;
+  //   }
+  //   for (let i = 1; i <= n; i++) {
+  //     sum += i * ++tmp;
+  //   }
+  //   return `n = ${n}\nGiá trị biểu thức: S = ${sum}`;
+  if (!Number.isInteger(n) || n < 1) {
+    return `Số ${n}: không phải là số nguyên dương`;
+  }
   let sum = 0;
-  let tmp = 1;
-  if (n % 1 !== 0) {
-    return `Số ${n}: không phải là số nguyên`;
-  }
   for (let i = 1; i <= n; i++) {
-    sum += i * ++tmp;
+    sum += i * (i + 1);
   }
-  return `n = ${n}\nGiá trị biểu thức: S = ${sum}`;
+  return sum;
 }
+
 console.log(getTotal(4));

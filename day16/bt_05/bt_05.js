@@ -115,7 +115,6 @@ function changeThousand(n) {
 }
 
 function numberToString(n) {
-  console.log(n);
   let result = ``;
   let thousand = ``;
   let hundred = ``;
@@ -157,7 +156,7 @@ function numberToString(n) {
   if (n > 100) {
     hundred = `${changeHundred(n)}`;
     n = n % 100;
-    console.log(n);
+
     dozen = `${changeDozen(n)}`;
     if (n < 10) {
       dozen = `lẻ `;

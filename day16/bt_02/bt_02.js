@@ -7,15 +7,27 @@
 */
 
 function getTotal(a, b) {
-  let evenTotal = 0;
-  let oddTotal = 0;
-  for (let i = a; i <= b; i++) {
+  // let evenTotal = 0;
+  // let oddTotal = 0;
+  // for (let i = a; i <= b; i++) {
+  //   if (i % 2 === 0) {
+  //     evenTotal += i;
+  //   } else {
+  //     oddTotal += i;
+  //   }
+  // }
+  // return `Tổng số lẻ: ${oddTotal}\nTổng số chẵn: ${evenTotal}`;
+  const start = Math.min(a, b);
+  const end = Math.max(a, b);
+  let sumEven = 0;
+  let sumOdd = 0;
+  for (let i = start; i <= end; i++) {
     if (i % 2 === 0) {
-      evenTotal += i;
+      sumEven += i;
     } else {
-      oddTotal += i;
+      sumOdd += i;
     }
   }
-  return `Tổng số lẻ: ${oddTotal}\nTổng số chẵn: ${evenTotal}`;
+  return `Tổng số lẻ: ${sumOdd}\nTổng số chẵn: ${sumEven}`;
 }
 console.log(getTotal(5, 9));

@@ -15,7 +15,7 @@
 function squareNumber(n) {
   let result = "";
   let tmp;
-  for (let i = 1; i <= n; i++) {
+  for (let i = 1; i * i <= n; i++) {
     if (i % 1 === 0) {
       if (i <= 1) {
         result += `${i}`;
