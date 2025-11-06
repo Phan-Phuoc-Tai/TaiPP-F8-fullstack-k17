@@ -16,7 +16,7 @@ function fibonacci(n) {
 }
 
 const sumFibonacci = (n) => {
-  if (!Number.isInteger(n)) {
+  if (!Number.isInteger(n) || n <= 0) {
     return `Số ${n}: không hợp lệ`;
   }
   let sum = 0;

@@ -5,8 +5,8 @@
 //output: trả về true / false
 
 const isTriangle = (a, b, c) => {
-  if ((isFinite(a) !== true, isFinite(b) !== true, isFinite(c) !== true)) {
-    return `Không hợp lệ`;
+  if (!isFinite(a) || !isFinite(b) || !isFinite(c)) {
+    return false;
   }
   if (a + b < c || a + c < b || b + c < a) {
     return false;
