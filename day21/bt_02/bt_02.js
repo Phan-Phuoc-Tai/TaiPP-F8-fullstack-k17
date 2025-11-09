@@ -28,8 +28,12 @@ const totalProducts = products.reduce((acc, cur) => acc + cur.price, 0);
 console.log(totalProducts);
 
 // Lọc ra sản phẩm có giá lớn hơn 1 triệu.
-const productMillion = products.reduce((acc, cur) => {
-  return acc.price > cur.price ? acc : cur;
-});
-const result = `${productMillion.name} là sản phẩm có giá lớn hơn 1 triệu`;
+const productMillion = products.filter((item) => {
+  const condition = 1000000;
+  const arr = [];
+  if (item.price > condition) {
+    return arr.push(item);
+  }
+}, 0);
+const result = productMillion.map((item) => item.name);
 console.log(result);
