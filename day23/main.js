@@ -1,6 +1,6 @@
 //Get Element Node
-const usernameEl = document.querySelector("#username");
-const emailEl = document.querySelector("#email");
+const usernameEl = document.querySelector("#username__form");
+const emailEl = document.querySelector("#email__form");
 const passwordEl = document.querySelector("#password");
 const passwordConfirmEl = document.querySelector("#password-confirm");
 const btnEl = document.querySelector(".btn");
