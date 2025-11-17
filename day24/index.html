@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Todos App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
+    <style type="text/tailwindcss">
+      body {
+        @apply h-screen flex justify-center bg-violet-500 font-[Poppins,sans-serif];
+      }
+
+      .app {
+        @apply text-center;
+      }
+      .todoWrapper {
+        @apply bg-violet-950 rounded-md p-8 mt-20;
+      }
+      h1 {
+        @apply text-3xl capitalize text-white mb-2;
+      }
+      .todoForm {
+        @apply w-full;
+      }
+      .todoInput {
+        @apply w-[300px] outline-none border border-violet-500 px-4 py-2 mt-4 mb-8 text-white;
+      }
+      .todoBtn {
+        @apply bg-violet-500 text-white px-4 py-2 ml-[-5px] border border-violet-500 cursor-pointer select-none;
+      }
+      .todo {
+        @apply flex justify-between bg-violet-500 rounded-md mb-4 p-4 text-white;
+      }
+      .todo p {
+        @apply cursor-pointer;
+      }
+      img {
+        @apply w-4 ml-2 inline-block object-cover cursor-pointer;
+      }
+      .complete {
+        @apply text-violet-300 line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="app">
+        <div class="todoWrapper">
+          <h1>get things done !</h1>
+          <form class="todoForm">
+            <input
+              type="text"
+              class="todoInput"
+              placeholder="What is the task today?"
+              value=""
+            />
+            <!--end .todoInput-->
+            <button type="submit" class="todoBtn">Add Task</button>
+            <!--end .todoBtn-->
+          </form>
+          <!--end .todoForm-->
+        </div>
+        <!--end .todoWrapper-->
+      </div>
+      <!--end .app-->
+    </div>
+    <!--end #root-->
+    <script src="./main.js"></script>
+  </body>
+</html>
