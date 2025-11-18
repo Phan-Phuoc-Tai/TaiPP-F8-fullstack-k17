@@ -69,7 +69,8 @@ function validateUsername() {
 //validateEmail
 function validateEmail() {
   const emailDiv = document.querySelector(".email");
-  if (emailEl.value.toString().includes("@")) {
+  const emailRegex = /^[\w\.-]+@([\w-]+\.)+[\w-]{2,4}$/; //Biểu thức kiểm tra validateEmail đầy đủ hơn
+  if (emailRegex.test(emailEl.value)) {
     success(emailDiv);
     emailEl.className = "border-gray-300";
   } else {
