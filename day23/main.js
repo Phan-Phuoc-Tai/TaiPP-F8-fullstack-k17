@@ -124,7 +124,7 @@ usernameEl.addEventListener("input", validateUsername);
 emailEl.addEventListener("input", validateEmail);
 passwordEl.addEventListener("input", validatePassword);
 passwordConfirmEl.addEventListener("input", validatePasswordConfirm);
-
+usernameEl.focus();
 btnEl.addEventListener("click", function () {
   validateUsername();
   validateEmail();
