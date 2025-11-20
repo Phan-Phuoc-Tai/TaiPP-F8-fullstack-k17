@@ -46,15 +46,33 @@ todoFormEl.addEventListener("submit", prevent);
 
 //create
 inputEl.addEventListener("input", () => {
+  const taskNameList = todoWrapperEl.querySelectorAll(".todo p");
+  const errorEl = document.createElement("span");
   if (inputEl.value) {
     btnEl.onclick = function () {
       const todoEl = document.createElement("div");
       const pEl = document.createElement("p");
+      const errorItem = todoFormEl.querySelector("span");
       todoWrapperEl.append(todoEl);
+      todoFormEl.append(errorEl);
       todoEl.classList.add("todo");
       todoEl.append(pEl);
       createTodo(todoEl);
       pEl.innerText = inputEl.value;
+      if (taskNameList.length >= 1) {
+        taskNameList.forEach((taskName) => {
+          if (taskName.innerText === inputEl.value) {
+            todoFormEl.append(errorEl);
+            errorEl.innerText = "This task already exists";
+            todoEl.outerHTML = "";
+          } else {
+            pEl.innerText = inputEl.value;
+          }
+        });
+      }
+      if (errorItem) {
+        errorItem.outerHTML = "";
+      }
       inputEl.value = "";
       setTimeout(() => (btnEl.onclick = null), 0);
     };
@@ -65,7 +83,7 @@ todoWrapperEl.addEventListener("click", () => {
   const todoEls = todoWrapperEl.querySelector(".todo")
     ? todoWrapperEl.querySelectorAll(".todo")
     : null;
-  if (todoEls !== null) {
+  if (todoEls) {
     todoEls.forEach((item) => {
       const deleteIconEl = item.querySelector(".deleteIcon");
       deleteIconEl.onclick = () => {
@@ -77,6 +95,10 @@ todoWrapperEl.addEventListener("click", () => {
       };
       const editIconEl = item.querySelector(".editIcon");
       editIconEl.onclick = () => {
+        const errorItem = todoWrapperEl.querySelector("span");
+        if (errorItem) {
+          errorItem.outerHTML = "";
+        }
         const todoFormEl = document.createElement("form");
         createTodoForm(todoFormEl);
         todoWrapperEl.insertBefore(todoFormEl, item.nextElementSibling);
@@ -88,6 +110,8 @@ todoWrapperEl.addEventListener("click", () => {
         inputEl.focus();
         item.outerHTML = "";
         todoFormEl.addEventListener("submit", prevent);
+        const taskNameList = todoWrapperEl.querySelectorAll(".todo p");
+        const errorEl = document.createElement("span");
         btnEl.onclick = function () {
           const todoEl = document.createElement("div");
           const pEl = document.createElement("p");
@@ -96,9 +120,19 @@ todoWrapperEl.addEventListener("click", () => {
           todoEl.classList.add("todo");
           todoEl.append(pEl);
           createTodo(todoEl);
-          pEl.innerText = inputEl.value;
           pEl.className = taskEl.className;
-          setTimeout(() => (todoFormEl.outerHTML = ""), 0);
+          if (taskNameList.length >= 1) {
+            taskNameList.forEach((taskName) => {
+              if (taskName.innerText === inputEl.value) {
+                todoFormEl.append(errorEl);
+                errorEl.innerText = "This task already exists";
+                todoEl.outerHTML = "";
+              } else {
+                pEl.innerText = inputEl.value;
+                setTimeout(() => (todoFormEl.outerHTML = ""), 0);
+              }
+            });
+          }
         };
       };
     });
