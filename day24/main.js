@@ -6,134 +6,134 @@ const todoFormEl = todoWrapperEl.querySelector(".todoForm");
 const inputEl = todoFormEl.querySelector(".todoInput");
 const btnEl = todoFormEl.querySelector(".todoBtn");
 
-//variable icon
+//variable
 const editIcon = "./images/edit-icon.svg";
 const deleteIcon = "./images/delete-icon.svg";
-
+const errorEl = document.createElement("span");
+//preventDefault
+function preventDefault(event) {
+  event.preventDefault();
+}
+//validateInput
+function validateInput(value, arr) {
+  let notice = "";
+  if (!value) {
+    return `This task can not be blank`;
+  }
+  arr.forEach((item) => {
+    if (item.innerText.toLocaleLowerCase() === value.toLocaleLowerCase()) {
+      notice = `This task already exists`;
+    }
+  });
+  return notice;
+}
 //createTodo
-function createTodo(elementNode) {
+function createTodo(elementNode, value) {
   const divEl = document.createElement("div");
+  const pEl = document.createElement("p");
   const editIconEl = document.createElement("img");
   const deleteIconEl = document.createElement("img");
   editIconEl.src = editIcon;
   editIconEl.classList.add("editIcon");
   deleteIconEl.src = deleteIcon;
   deleteIconEl.classList.add("deleteIcon");
+  elementNode.classList.add("todo");
+  elementNode.append(pEl);
   elementNode.append(divEl);
   divEl.append(editIconEl);
   divEl.append(deleteIconEl);
+  pEl.innerText = value;
 }
 
-//createTodoForm
-function createTodoForm(formNode) {
+//createFrom
+function createFrom(elementNode, value) {
   const inputEl = document.createElement("input");
   const btnEl = document.createElement("button");
   inputEl.type = "text";
   inputEl.placeholder = "Update task";
+  inputEl.value = value;
   inputEl.classList.add("todoInput");
   btnEl.innerText = "Add Task";
   btnEl.classList.add("todoBtn");
-  formNode.append(inputEl);
-  formNode.append(btnEl);
+  elementNode.classList.add("todoForm");
+  elementNode.append(inputEl);
+  elementNode.append(btnEl);
 }
 
-//prevent
-function prevent(event) {
-  event.preventDefault();
-}
-//block page loading
-todoFormEl.addEventListener("submit", prevent);
+todoFormEl.addEventListener("submit", preventDefault);
 
-//create
 inputEl.addEventListener("input", () => {
-  const taskNameList = todoWrapperEl.querySelectorAll(".todo p");
-  const errorEl = document.createElement("span");
-  if (inputEl.value) {
-    btnEl.onclick = function () {
-      const todoEl = document.createElement("div");
-      const pEl = document.createElement("p");
-      const errorItem = todoFormEl.querySelector("span");
+  btnEl.onclick = () => {
+    const todoForm = document.createElement("form");
+    const todoEl = document.createElement("div");
+    const todoList = todoWrapperEl.querySelectorAll(".todo");
+    const errorNoticeEl = todoWrapperEl.querySelector("span");
+    const isErrorInput = validateInput(inputEl.value, todoList) || null;
+    if (inputEl.value) {
       todoWrapperEl.append(todoEl);
-      todoFormEl.append(errorEl);
-      todoEl.classList.add("todo");
-      todoEl.append(pEl);
-      createTodo(todoEl);
-      pEl.innerText = inputEl.value;
-      if (taskNameList.length >= 1) {
-        taskNameList.forEach((taskName) => {
-          if (taskName.innerText === inputEl.value) {
-            todoFormEl.append(errorEl);
-            errorEl.innerText = "This task already exists";
-            todoEl.outerHTML = "";
-          } else {
-            pEl.innerText = inputEl.value;
-          }
-        });
-      }
-      if (errorItem) {
-        errorItem.outerHTML = "";
-      }
+      todoWrapperEl.append(todoForm);
+      createTodo(todoEl, inputEl.value);
+      createFrom(todoForm, inputEl.value);
       inputEl.value = "";
-      setTimeout(() => (btnEl.onclick = null), 0);
-    };
-  }
+      todoForm.classList.add("hidden");
+    }
+    if (errorNoticeEl) {
+      errorEl.outerHTML = "";
+    }
+    if (isErrorInput) {
+      todoFormEl.append(errorEl);
+      errorEl.innerText = isErrorInput;
+      todoEl.outerHTML = "";
+    }
+  };
 });
 
 todoWrapperEl.addEventListener("click", () => {
-  const todoEls = todoWrapperEl.querySelector(".todo")
-    ? todoWrapperEl.querySelectorAll(".todo")
-    : null;
-  if (todoEls) {
-    todoEls.forEach((item) => {
-      const deleteIconEl = item.querySelector(".deleteIcon");
+  const todoList = document.querySelectorAll(".todo") || null;
+  const todoFormList = document.querySelectorAll(".todoForm") || null;
+  if (todoList) {
+    todoList.forEach((todo, index) => {
+      const deleteIconEl = todo.querySelector(".deleteIcon");
       deleteIconEl.onclick = () => {
-        item.outerHTML = "";
+        todo.outerHTML = "";
+        todoFormList[index++].outerHTML = "";
       };
-      const taskEl = item.querySelector("p");
-      taskEl.onclick = () => {
-        taskEl.classList.toggle("complete");
+      const taskDone = todo.querySelector("p");
+      taskDone.onclick = () => {
+        taskDone.classList.toggle("complete");
       };
-      const editIconEl = item.querySelector(".editIcon");
+      const editIconEl = todo.querySelector(".editIcon");
       editIconEl.onclick = () => {
-        const errorItem = todoWrapperEl.querySelector("span");
-        if (errorItem) {
-          errorItem.outerHTML = "";
-        }
-        const todoFormEl = document.createElement("form");
-        createTodoForm(todoFormEl);
-        todoWrapperEl.insertBefore(todoFormEl, item.nextElementSibling);
-        todoFormEl.classList.add("todoForm");
-        const valueInput = item.querySelector("p");
-        const inputEl = todoFormEl.querySelector(".todoInput");
-        const btnEl = todoFormEl.querySelector(".todoBtn");
-        inputEl.value = valueInput.innerText;
-        inputEl.focus();
-        item.outerHTML = "";
-        todoFormEl.addEventListener("submit", prevent);
-        const taskNameList = todoWrapperEl.querySelectorAll(".todo p");
-        const errorEl = document.createElement("span");
-        btnEl.onclick = function () {
-          const todoEl = document.createElement("div");
-          const pEl = document.createElement("p");
-          todoWrapperEl.append(todoEl);
-          todoWrapperEl.insertBefore(todoEl, todoFormEl.nextElementSibling);
-          todoEl.classList.add("todo");
-          todoEl.append(pEl);
-          createTodo(todoEl);
-          pEl.className = taskEl.className;
-          if (taskNameList.length >= 1) {
-            taskNameList.forEach((taskName) => {
-              if (taskName.innerText === inputEl.value) {
-                todoFormEl.append(errorEl);
-                errorEl.innerText = "This task already exists";
-                todoEl.outerHTML = "";
-              } else {
-                pEl.innerText = inputEl.value;
-                setTimeout(() => (todoFormEl.outerHTML = ""), 0);
-              }
-            });
+        const todoForm = todoFormList[++index];
+        todoForm.classList.remove("hidden");
+        todo.classList.add("hidden");
+        todoForm.addEventListener("submit", preventDefault);
+        const inputEl = todoForm.querySelector(".todoInput");
+        const btnEl = todoForm.querySelector(".todoBtn");
+        btnEl.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const errorNoticeEl = todoWrapperEl.querySelector("span");
+          let isErrorInput = validateInput(inputEl.value, todoList) || null;
+          const pEl = todo.querySelector("p");
+
+          if (
+            inputEl.value === pEl.innerText ||
+            (inputEl.value !== pEl.innerText && !isErrorInput)
+          ) {
+            todoForm.classList.add("hidden");
+            todo.classList.remove("hidden");
+            pEl.innerText = inputEl.value;
+            isErrorInput = "";
           }
-        };
+          if (errorNoticeEl) {
+            errorEl.outerHTML = "";
+          }
+
+          if (inputEl.value !== pEl.innerText && isErrorInput) {
+            todoForm.append(errorEl);
+            errorEl.innerText = isErrorInput;
+          }
+        });
       };
     });
   }
