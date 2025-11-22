@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>My Slide</title>
+    <style type="text/tailwindcss">
+      body {
+        @apply overflow-hidden;
+      }
+      .slide {
+        @apply w-screen max-h-[500px] relative;
+      }
+      img {
+        @apply block w-screen max-h-[500px] object-fill;
+      }
+      .slide > .slide_inner {
+        @apply text-[0px] transition-[transform] duration-1000;
+      }
+      .slide .slide_inner .item {
+        @apply inline-block;
+      }
+      .slide .slide_nav {
+        @apply absolute top-[50%] w-screen flex justify-between items-center;
+      }
+      .slide .slide_nav span {
+        @apply inline-block bg-gray-300 px-2 py-1 text-white font-black
+        cursor-pointer select-none;
+      }
+      .slide .slide_nav .previous {
+        @apply ml-2;
+      }
+      .slide .slide_nav .next {
+        @apply mr-2;
+      }
+      .slide .slide_dots {
+        @apply absolute bottom-4 w-screen text-center;
+      }
+      .slide .slide_dots .dot {
+        @apply inline-block w-4 h-4 rounded-[50%] bg-white mx-1 cursor-pointer select-none;
+      }
+      .slide .slide_dots .dot.active {
+        @apply bg-orange-400;
+      }
+      .slide {
+        transform: translateX();
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide">
+      <div class="slide_inner">
+        <div class="item active">
+          <img
+            src="https://fastly.picsum.photos/id/55/536/354.jpg?hmac=hfDtZpYSEEc7z8nd1Q3-5_FgyjPTBJYpj_jxo-HYofk"
+            alt="slide-image"
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://fastly.picsum.photos/id/215/536/354.jpg?hmac=OkVbx3GP330XvEC_lcaq0yDtM9aZhCJGl0zVhCaHj9g"
+            alt="slide-image"
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://fastly.picsum.photos/id/371/536/354.jpg?hmac=gJcfdLhCJUKk3QwFytt2mMe6YHlRYiuhekd2evpY7Kk"
+            alt="slide-image"
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://fastly.picsum.photos/id/57/536/354.jpg?hmac=UJzWefm05lZlbxWqa0be51I5DAtx1ne2xZ6zHyehiZ0"
+            alt="slide-image"
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://fastly.picsum.photos/id/805/536/354.jpg?hmac=RXC0ZMMUOP40AcmXEFwCVG94YG2LZEs9DQyoEYHLF0k"
+            alt="slide-image"
+          />
+        </div>
+      </div>
+      <!--end .slide-inner-->
+      <div class="slide_nav">
+        <span class="previous">&lt;</span>
+        <span class="next">&gt;</span>
+      </div>
+      <!--end .slide_nav-->
+      <div class="slide_dots"></div>
+    </div>
+    <!--end .slide-->
+    <script src="./main.js"></script>
+  </body>
+</html>
