@@ -29,7 +29,6 @@ const dotActive = (e) => {
   dotActiveEl.classList.remove("active");
   dotEl.classList.add("active");
 };
-slideDotsEl.addEventListener("click", dotActive);
 
 //datasetIndex, add class active
 const dotList = slideEl.querySelectorAll(".dot");
@@ -38,7 +37,8 @@ dotList.forEach((dot, index) => {
   if (dot.dataset.index === "1") {
     dot.classList.add("active");
   }
-  dot.onclick = () => {
+  dot.onclick = (e) => {
+    dotActive(e);
     const itemEl = slideInnerEl.querySelector(".item");
     const indexDotActive = +dot.dataset.index;
     const coordinatesItem =
