@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Blogs</title>
+    <style type="text/tailwindcss">
+      button {
+        @apply select-none;
+      }
+      #blogs .container {
+        @apply max-w-[1200px] mx-auto px-4;
+      }
+      #blogs .blog-inner {
+        @apply flex items-start justify-center flex-col;
+      }
+      #blogs .blog-inner .blog-title {
+        @apply mt-2 mx-auto text-3xl font-bold;
+      }
+      #blogs .blog-inner .search-btn {
+        @apply outline-none border-2 border-neutral-300 w-full mt-3 px-3 py-2 rounded-sm focus:border-red-500;
+      }
+      #blogs .blog-inner .add {
+        @apply border border-neutral-300 mt-3 px-3 py-1 rounded-sm hover:bg-green-600 hover:text-white hover:border-green-600 cursor-pointer;
+      }
+      #blogs .blog-inner .blog-sort {
+        @apply mt-3 flex items-center gap-2;
+      }
+      #blogs .blog-inner .blog-sort button {
+        @apply border border-neutral-300 px-3 py-1 rounded-sm hover:bg-yellow-300 hover:border-yellow-300 cursor-pointer;
+      }
+      #blogs .blog-inner .blog-sort button.active {
+        @apply bg-yellow-300 border-yellow-300;
+      }
+      #blogs .blog-inner .posts {
+        @apply w-full pb-10;
+      }
+      #blogs .blog-inner .posts .post {
+        @apply border border-neutral-300 mt-3 px-3 py-2;
+      }
+      #blogs .blog-inner .post .post-title {
+        @apply font-semibold text-xl;
+      }
+      #blogs .blog-inner .post .post-body {
+        @apply mt-3;
+      }
+      #blogs .blog-inner .post .post-footer {
+        @apply mt-3 flex justify-between items-center gap-2;
+      }
+      #blogs .blog-inner .post .post-footer .detail {
+        @apply border border-neutral-300 px-4 py-1 rounded-[100px] font-medium hover:bg-green-600 hover:text-white hover:border-green-600 cursor-pointer;
+      }
+      #blogs .blog-inner .post .post-footer .edit {
+        @apply ml-auto font-semibold cursor-pointer hover:underline;
+      }
+      #blogs .blog-inner .post .post-footer .delete {
+        @apply font-semibold text-red-500 cursor-pointer hover:underline;
+      }
+      #blogs .blog-inner .posts li.error {
+        @apply text-red-400 italic text-xl mt-3;
+      }
+      #blogs .blog-inner .posts .post .post-id {
+        @apply hidden;
+      }
+
+      #modal {
+        @apply absolute px-4;
+      }
+      #modal .overlay {
+        @apply absolute z-10 bg-[rgba(0,0,0,0.4)];
+      }
+      #modal .modal-inner {
+        @apply absolute left-0 right-0 z-20 bg-white mx-auto w-[90%] px-4 py-3 rounded-md;
+      }
+      #modal .modal-inner .modal-title {
+        @apply flex justify-between items-center py-2 border-b border-neutral-400 text-xl font-bold;
+      }
+      #modal .modal-inner .modal-title .modal-close {
+        @apply block w-8 h-8 bg-neutral-300 rounded-[50%] text-center hover:text-red-600 hover:bg-neutral-200 cursor-pointer;
+      }
+      #modal .modal-inner .modal-body span {
+        @apply block font-bold text-xl text-center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="blogs">
+      <div class="container">
+        <div class="blog-inner">
+          <h1 class="blog-title">Blogs</h1>
+          <input type="text" placeholder="Search..." class="search-btn" />
+          <button class="add">Thêm mới</button>
+          <div class="blog-sort">
+            <button class="sort-latest active">Mới nhất</button>
+            <button class="sort-oldest">Cũ nhất</button>
+          </div>
+          <ul class="posts">
+            <li>Loading...</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="modal" class="hidden">
+      <div class="overlay"></div>
+      <div class="modal-inner">
+        <div class="modal-title">
+          <h2></h2>
+          <span class="modal-close">&times;</span>
+        </div>
+        <p class="modal-body">
+          <span>Loading...</span>
+        </p>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
