@@ -128,10 +128,20 @@ const getInfo = async (information, service, isModal) => {
   }
 };
 
+const closeModal = () => {
+  const span = document.createElement("span");
+  modalEl.classList.toggle("hidden");
+  modalTitle.innerText = "";
+  modalBody.innerText = "";
+  span.innerText = "Loading...";
+  modalBody.append(span);
+};
+
 const sortLatest = "?sortBy=id&order=desc";
 const sortOldest = "?sortBy=id&order=asc";
 const limit = "?limit=30&page=2";
 getInfo("posts", sortLatest);
+
 const blogSortEl = blogsEl.querySelector(".blog-sort");
 const sortLatestBtn = blogSortEl.querySelector(".sort-latest");
 const sortOldestBtn = blogSortEl.querySelector(".sort-oldest");
@@ -182,8 +192,7 @@ searchBtnEl.addEventListener("change", () => {
 });
 const overlay = modalEl.querySelector(".overlay");
 
-postsEl.addEventListener("mousedown", (e) => {
-  e.stopPropagation();
+const updateModalHeight = () => {
   const css = {
     height: `${blogsEl.clientHeight}px`,
     position: "absolute",
@@ -191,6 +200,11 @@ postsEl.addEventListener("mousedown", (e) => {
   };
   Object.assign(modalEl.style, css);
   Object.assign(overlay.style, css);
+};
+
+postsEl.addEventListener("mousedown", (e) => {
+  e.stopPropagation();
+  updateModalHeight();
 
   const postList = postsEl.querySelectorAll(".post");
   postList.forEach((post) => {
@@ -201,8 +215,10 @@ postsEl.addEventListener("mousedown", (e) => {
       const id = postIdEl.innerText;
       detail += id;
       modalEl.classList.toggle("hidden");
+
       getInfo("posts", detail, true);
-      //
+
+      //update top modalInner
       let heightViewport = window.screen.height;
       let rate =
         (heightViewport * 0.43 - modalInner.clientHeight) / heightViewport;
@@ -220,33 +236,18 @@ postsEl.addEventListener("mousedown", (e) => {
 
 overlay.addEventListener("click", (e) => {
   e.stopPropagation();
-  const span = document.createElement("span");
-  modalEl.classList.toggle("hidden");
-  modalTitle.innerText = "";
-  modalBody.innerText = "";
-  span.innerText = "Loading...";
-  modalBody.append(span);
+  closeModal();
 });
 
 const modalClose = modalEl.querySelector(".modal-close");
 modalClose.addEventListener("click", (e) => {
   e.stopPropagation();
-  const span = document.createElement("span");
-  modalEl.classList.toggle("hidden");
-  modalTitle.innerText = "";
-  modalBody.innerText = "";
-  span.innerText = "Loading...";
-  modalBody.append(span);
+  closeModal();
 });
 
 document.addEventListener("keydown", (e) => {
   const isEscape = e.key === "Escape" ? true : false;
   if (isEscape) {
-    const span = document.createElement("span");
-    modalEl.classList.toggle("hidden");
-    modalTitle.innerText = "";
-    modalBody.innerText = "";
-    span.innerText = "Loading...";
-    modalBody.append(span);
+    closeModal();
   }
 });
