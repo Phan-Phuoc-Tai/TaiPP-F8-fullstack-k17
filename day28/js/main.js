@@ -1,3 +1,4 @@
+const body = document.querySelector("body");
 const blogsEl = document.querySelector("#blogs");
 const postsEl = blogsEl.querySelector(".posts");
 const loadingEl = blogsEl.querySelector(".posts li");
@@ -5,6 +6,9 @@ const modalEl = document.querySelector("#modal");
 const modalInner = modalEl.querySelector(".modal-inner");
 const modalTitle = modalEl.querySelector(".modal-title h2");
 const modalBody = modalEl.querySelector(".modal-body");
+
+//API
+const BASE_URL = "https://dummyjson.com";
 
 const createPost = (postsEl, title, body, id) => {
   const post = document.createElement("li");
@@ -54,9 +58,6 @@ const createPost = (postsEl, title, body, id) => {
   deleteBtn.classList.add("delete");
   postFooter.append(deleteBtn);
 };
-
-//API
-const BASE_URL = "https://dummyjson.com";
 
 const preventXSS = (str) => {
   return str.replaceAll("<", "&lt;").replaceAll(">", "&gt;");
@@ -135,6 +136,7 @@ const closeModal = () => {
   modalBody.innerText = "";
   span.innerText = "Loading...";
   modalBody.append(span);
+  body.classList.toggle("no-scroll");
 };
 
 const sortLatest = "?sortBy=id&order=desc";
@@ -190,6 +192,7 @@ searchBtnEl.addEventListener("change", () => {
   postsEl.append(loadingEl);
   getInfo("posts", search);
 });
+
 const overlay = modalEl.querySelector(".overlay");
 
 const updateModalHeight = () => {
@@ -215,7 +218,7 @@ postsEl.addEventListener("mousedown", (e) => {
       const id = postIdEl.innerText;
       detail += id;
       modalEl.classList.toggle("hidden");
-
+      body.classList.toggle("no-scroll");
       getInfo("posts", detail, true);
 
       //update top modalInner
