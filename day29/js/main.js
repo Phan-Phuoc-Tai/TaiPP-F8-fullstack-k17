@@ -182,12 +182,14 @@ const app = {
     const info = this._info;
     posts.forEach((post) => {
       let viewDetailBtn = post.querySelector(".js-view-detail");
+      const body = document.querySelector("body");
       viewDetailBtn.onclick = async (e) => {
         e.stopPropagation();
         this._query.postId = +post.dataset.id;
         let url = this.getUrl(info);
         const response = await fetch(url);
         const data = await response.json();
+        body.classList.toggle("no-scroll");
         this.renderPostId(data);
       };
       let editBtn = post.querySelector(".edit-btn");
@@ -197,6 +199,7 @@ const app = {
         let url = this.getUrl(info);
         const response = await fetch(url);
         const data = await response.json();
+        body.classList.toggle("no-scroll");
         this.renderUpdatePost(data);
       };
       let deleteBtn = post.querySelector(".delete-btn");
@@ -256,6 +259,7 @@ const app = {
     });
   },
   closeModal(modalEl, overlay, modalDetail, loading) {
+    const body = document.querySelector("body");
     const detailTitle = modalDetail.querySelector(".js-detail-title h2");
     const detailBody = modalDetail.querySelector(".js-detail-body");
     const css = {
@@ -265,6 +269,7 @@ const app = {
     Object.assign(modalEl.style, css);
     Object.assign(overlay.style, css);
     Object.assign(modalDetail.style, css);
+    body.classList.toggle("no-scroll");
     if (detailTitle) {
       detailTitle.innerHTML = "";
       detailBody.innerHTML = "";
@@ -294,6 +299,7 @@ const app = {
   },
 
   renderAddPost() {
+    const body = document.querySelector("body");
     const addBtn = document.querySelector(".js-add-btn");
     const modalEl = document.querySelector(".modal");
     const overlay = modalEl.querySelector(".js-overlay");
@@ -317,6 +323,7 @@ const app = {
       titleContent.value = "";
       bodyContent.value = "";
       titleContent.focus();
+      body.classList.toggle("no-scroll");
     });
     formEl.onsubmit = (e) => {
       e.preventDefault();
