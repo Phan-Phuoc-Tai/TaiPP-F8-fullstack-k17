@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      main {
+        @apply max-w-[85%] mx-auto;
+      }
+      main .heading {
+        @apply text-center text-3xl font-bold;
+      }
+      main .search {
+        @apply outline-none border border-gray-300 w-full mt-3 py-2 px-3;
+      }
+      main .add-btn,
+      main .controls button,
+      main .post .js-view-detail,
+      main .paginate button {
+        @apply border border-gray-300 py-2 px-3 cursor-pointer select-none;
+      }
+      main .add-btn {
+        @apply w-28 mt-3 hover:bg-green-600;
+      }
+      main .controls {
+        @apply flex gap-3 mt-3;
+      }
+      main .controls button {
+        @apply w-28 hover:bg-yellow-300;
+      }
+      main .controls button.active {
+        @apply bg-yellow-300;
+      }
+
+      main .post-list {
+        @apply mb-3;
+      }
+      main .post {
+        @apply mt-3 border border-gray-300 p-4;
+      }
+      main .post .post-title {
+        @apply text-lg font-medium;
+      }
+      main .post .post-body {
+        @apply my-2;
+      }
+      main .post .feature {
+        @apply flex justify-between gap-2;
+      }
+      main .post .feature .js-view-detail {
+        @apply w-30 rounded-full  hover:bg-green-600 hover:text-gray-100;
+      }
+      main .post .feature .edit-btn {
+        @apply ml-auto font-medium cursor-pointer hover:underline;
+      }
+      main .post .feature .delete-btn {
+        @apply text-red-600 font-medium cursor-pointer hover:underline;
+      }
+      .modal {
+        @apply fixed inset-0 hidden;
+      }
+      .modal .overlay {
+        @apply hidden inset-0 bg-[rgba(0,0,0,0.3)] z-10;
+      }
+      .modal .modal-detail,
+      .modal .modal-action {
+        @apply hidden top-[35%] left-0 right-0 mx-auto bg-white w-[90%] py-3 px-5 rounded-md z-20;
+      }
+      .modal .title {
+        @apply border-b border-gray-300 flex items-center justify-between;
+      }
+      .modal h2 {
+        @apply font-semibold text-xl;
+      }
+      .modal .close-modal {
+        @apply block py-1 px-2 font-semibold text-xl hover:text-red-600 cursor-pointer select-none;
+      }
+      .modal .body {
+        @apply flex flex-col;
+      }
+      .modal .title-content,
+      .modal .body-content {
+        @apply outline-none border border-gray-300 w-full mt-3 py-2 px-3 focus:border-black;
+      }
+
+      .modal .save-btn {
+        @apply border border-gray-300 bg-green-700 mt-1 py-2 px-3 text-white cursor-pointer select-none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 class="heading">Blogs</h1>
+      <input type="search" placeholder="Search..." class="js-search search" />
+      <button class="js-add-btn add-btn">Thêm mới</button>
+      <div class="controls">
+        <button data-sort="desc" class="js-latest-btn latest-btn active">
+          Mới nhất
+        </button>
+        <button data-sort="asc" class="js-oldest-btn oldest-btn">
+          Cũ nhất
+        </button>
+      </div>
+      <div class="js-loading"></div>
+      <ul class="js-post-list post-list"></ul>
+      <div class="js-paginate paginate"></div>
+    </main>
+    <div class="modal">
+      <div class="js-overlay overlay"></div>
+      <div class="js-modal-detail modal-detail">
+        <div class="js-detail-title title">
+          <h2></h2>
+          <span class="js-close-modal close-modal">&times;</span>
+        </div>
+        <p class="js-detail-body detail-body">
+          <span class="block py-2 text-xl font-semibold text-center"
+            >Loading...</span
+          >
+        </p>
+      </div>
+      <div class="js-modal-action modal-action">
+        <div class="js-title title">
+          <h2></h2>
+          <span class="js-close-modal close-modal">&times;</span>
+        </div>
+        <div class="js-body body">
+          <form>
+            <input
+              type="text"
+              placeholder="Tiêu đề..."
+              class="js-title-content title-content"
+            />
+            <textarea
+              name="content"
+              placeholder="Nội dung..."
+              class="js-body-content body-content"
+              rows="3"
+            ></textarea>
+            <button type="submit" class="save-btn">Lưu</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
