@@ -338,9 +338,9 @@ const app = {
           this.closeModal(modalEl, overlay, modalAction);
         }, 300);
       } else if (!titleContent.value) {
-        alert("Không được để trống tiêu đề");
+        alert("Bạn chưa nhập tiêu đề!");
       } else if (!bodyContent.value) {
-        alert("Không được để trống nội dung");
+        alert("Bạn chưa nhập nội dung!");
       }
     };
   },
@@ -403,9 +403,9 @@ const app = {
           this.closeModal(modalEl, overlay, modalAction);
         }, 300);
       } else if (!titleContent.value) {
-        alert("Không được để trống tiêu đề");
+        alert("Bạn chưa nhập tiêu đề!");
       } else if (!bodyContent.value) {
-        alert("Không được để trống nội dung");
+        alert("Bạn chưa nhập nội dung!");
       }
     };
   },
