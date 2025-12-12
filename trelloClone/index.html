@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trello Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+      body {
+        @apply px-5;
+      }
+      main {
+        @apply mt-[100px] mx-auto max-w-[1200px] bg-[rgba(255,255,255,0.4)] rounded-md  py-10;
+      }
+      .trello-logo {
+        @apply flex items-center justify-center gap-2 text-3xl font-bold;
+      }
+      .trello-logo img {
+        @apply w-10 h-10;
+      }
+      main h2 {
+        @apply text-2xl text-center font-medium;
+      }
+      .login-form {
+        @apply w-[70%] mx-auto mt-2 p-4 bg-[rgba(255,255,255,0.5)] rounded-sm;
+      }
+      .login-form div {
+        @apply mb-4;
+      }
+      .login-form label {
+        @apply block font-medium text-lg text-gray-800;
+      }
+      .login-form input {
+        @apply w-full outline-none border border-gray-400 px-3 py-2 mt-2  rounded-sm focus:border-black focus:bg-slate-50;
+      }
+      .login-form .login-btn {
+        @apply w-full my-3 p-2 outline-none rounded-sm border border-[#4753d2d4] bg-[#4753d2e0] text-white font-semibold cursor-pointer select-none hover:bg-[#4753d2];
+      }
+      .message-danger {
+        @apply w-[70%] mx-auto mt-2 py-3 rounded-sm bg-red-200 text-lg text-center text-red-500;
+      }
+      .error {
+        @apply block w-[70%] px-1 text-base text-red-500;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background: linear-gradient(
+          1turn,
+          rgba(250, 55, 208, 0.8),
+          hsla(300, 9%, 98%, 0) 70.71%
+        ),
+        linear-gradient(280deg, #0fdae4, #4752d2 70.71%);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    "
+  >
+    <main>
+      <div class="trello-logo">
+        <img src="./images/trelloLogo.png" alt="logo" />
+        <h1>Trello</h1>
+      </div>
+      <h2>Login</h2>
+      <div class="js-message"><span></span></div>
+      <form class="js-login-form login-form">
+        <div class="login-email">
+          <label for="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email..."
+            class="js-email email"
+          />
+          <span class="js-error error error-email"></span>
+        </div>
+        <div class="login-password">
+          <label for="">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Password..."
+            class="js-password password"
+          />
+          <span class="js-error error error-password"></span>
+        </div>
+        <button class="login-btn">Login</button>
+      </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/axios.js"></script>
+    <script src="./js/trelloLogin.js"></script>
+  </body>
+</html>
