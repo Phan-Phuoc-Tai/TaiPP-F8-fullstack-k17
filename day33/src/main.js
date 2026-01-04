@@ -18,6 +18,14 @@ const TodoWrapper = () => {
   };
   const handleDeleteTask = (_index) => {
     setTasks(tasks.filter((_, index) => index !== _index));
+    setTaskEdit(
+      tasksEdit.map((task) => {
+        if (task > _index) {
+          return task - 1;
+        }
+        return task;
+      })
+    );
   };
   const handleTaskCompleted = (index) => {
     if (tasksCompleted.includes(index)) {
