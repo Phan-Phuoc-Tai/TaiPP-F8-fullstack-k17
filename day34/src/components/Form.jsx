@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 export default function Form(props) {
-  const { onSubmit: handleSendToken, OTPLength } = props;
+  const { onSubmit: handleSendOTP, OTPLength } = props;
   const [values, setValues] = useState([]);
   const handleChangeValue = (e) => {
     setValues([...values, e.target.value]);
@@ -26,7 +26,7 @@ export default function Form(props) {
     };
     formEl.addEventListener("keydown", handleClear);
 
-    const handlePasteToken = (e) => {
+    const handlePasteOTP = (e) => {
       e.preventDefault();
       const clipboardData = e.clipboardData.getData("text");
       if (clipboardData.length <= OTPLength) {
@@ -36,7 +36,7 @@ export default function Form(props) {
         setValues([...values, ...clipboardData.split("")]);
       }
     };
-    formEl[0].addEventListener("paste", handlePasteToken);
+    formEl[0].addEventListener("paste", handlePasteOTP);
 
     const resetForm = () => {
       const tokens = Array.from(formEl.children);
@@ -45,7 +45,7 @@ export default function Form(props) {
     };
     let result = values.join("");
     if (result.length === OTPLength) {
-      handleSendToken(+result);
+      handleSendOTP(+result);
       setTimeout(() => {
         resetForm();
       }, 100);
@@ -53,7 +53,7 @@ export default function Form(props) {
 
     return () => {
       formEl.removeEventListener("keydown", handleClear);
-      formEl[0].removeEventListener("paste", handlePasteToken);
+      formEl[0].removeEventListener("paste", handlePasteOTP);
     };
   }, [values]);
 
