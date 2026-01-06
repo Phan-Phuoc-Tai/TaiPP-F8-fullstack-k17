@@ -26,9 +26,9 @@ export default function Form(props) {
     };
     formEl.addEventListener("keydown", handleClear);
 
-    const handlePasteToken = async (e) => {
+    const handlePasteToken = (e) => {
       e.preventDefault();
-      const clipboardData = await navigator.clipboard.readText();
+      const clipboardData = e.clipboardData.getData("text");
       if (clipboardData.length <= OTPLength) {
         for (let i = 0; i < clipboardData.length; i++) {
           formEl[i].value = clipboardData.charAt(i);
