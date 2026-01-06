@@ -29,7 +29,7 @@ export default function Form(props) {
     const handlePasteToken = async (e) => {
       e.preventDefault();
       const clipboardData = await navigator.clipboard.readText();
-      if (clipboardData.length === OTPLength) {
+      if (clipboardData.length <= OTPLength) {
         for (let i = 0; i < clipboardData.length; i++) {
           formEl[i].value = clipboardData.charAt(i);
         }
