@@ -26,8 +26,18 @@ export default function Login() {
   };
   const handleSubmitForm = async (e) => {
     e.preventDefault();
+    
     try {
       setError("");
+      if (!email) {
+      setError('Vui lòng nhập email')
+      return;
+      } 
+      if(!password) {
+        setError('Vui lòng nhập password')
+        return;
+
+      }
       setLoading(true);
       const response = await httpRequest.post(`/login`, { email, password });
       if (!response) {
