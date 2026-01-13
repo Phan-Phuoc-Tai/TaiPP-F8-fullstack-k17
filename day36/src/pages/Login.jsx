@@ -47,7 +47,7 @@ export default function Login() {
 
   return (
     <>
-      {accessToken ? <p>Loading...</p> : <div className="max-w-300 mx-auto flex flex-col justify-center items-center py-2 ">
+      {accessToken ? <p className="max-w-300 mx-auto text-center font-semibold text-3xl" >Loading...</p> : <div className="max-w-300 mx-auto flex flex-col justify-center items-center py-2 ">
       <form
         onSubmit={handleSubmitForm}
         className="w-100 border border-gray-500 rounded-lg p-4"
