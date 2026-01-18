@@ -14,7 +14,7 @@ export default function Header() {
           </h3>
           <a href="#!" className="block w-10 h-10 bg-white rounded-full">
             <img
-              src="./src/assets/github.svg"
+              src="/src/assets/github.svg"
               className="w-full object-cover "
             />
           </a>
