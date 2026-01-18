@@ -10,7 +10,7 @@ export default function Username() {
     const username = e.target.value;
     const firstName = userInfo.firstName;
     setValue(username);
-    if (!username.includes(firstName.toLowerCase()) && username) {
+    if (!username.toLowerCase().includes(firstName.toLowerCase()) && username) {
       setErr(`Username should contain your first name (${firstName})`);
       return;
     }
