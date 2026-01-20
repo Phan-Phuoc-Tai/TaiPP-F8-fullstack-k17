@@ -1,11 +1,12 @@
 import { use, useEffect, useState } from "react";
 import { FormWizardContext } from "../contexts/formWizardContext";
-import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function Username() {
-  const { register, errors, userInfo, err, setErr } = use(FormWizardContext);
+  const { register, errors, userInfo, err, setErr, steps, setStepActive } =
+    use(FormWizardContext);
   const [value, setValue] = useState("");
-  const navigate = useNavigate();
+  const { pathname } = useLocation();
   const handleEnterUsername = (e) => {
     const username = e.target.value;
     const firstName = userInfo.firstName;
@@ -17,10 +18,11 @@ export default function Username() {
     setErr("");
   };
   useEffect(() => {
-    if (!userInfo.firstName) {
-      navigate("/");
+    if (pathname === steps[2]) {
+      setStepActive(2);
     }
   }, [userInfo]);
+
   return (
     <div className="py-20 mx-auto max-w-227">
       <h2 className="mb-6.5 text-white/85 text-[26px] font-bold">Username</h2>
