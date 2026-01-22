@@ -5,10 +5,10 @@ import { useQuery } from "@tanstack/react-query";
 import { restaurantCacheKey } from "@/caches/restaurantCacheKey";
 
 export default function Restaurants() {
-  const baseUrl = import.meta.env.VITE_API_URL;
-
   const getCategories = async () => {
-    const response = await httpRequest.get(`${baseUrl}/restaurants`);
+    const response = await httpRequest.get(
+      `http://localhost:3000/counters/restaurants`,
+    );
     return response.data;
   };
   const { data } = useQuery({

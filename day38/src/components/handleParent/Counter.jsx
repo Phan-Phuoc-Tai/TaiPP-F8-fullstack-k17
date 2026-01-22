@@ -3,10 +3,8 @@ import { httpRequest } from "@/utils/httpRequest";
 import { useQuery } from "@tanstack/react-query";
 
 export default function Counter() {
-  const baseUrl = import.meta.env.VITE_API_URL;
-
   const getCounter = async () => {
-    const response = await httpRequest(`${baseUrl}/counters`);
+    const response = await httpRequest(`http://localhost:3000/counters`);
     return response.data;
   };
   const { data: counters } = useQuery({
