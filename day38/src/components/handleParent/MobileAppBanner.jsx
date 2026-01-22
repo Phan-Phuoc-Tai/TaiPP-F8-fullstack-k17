@@ -6,11 +6,11 @@ export default function MobileAppBanner() {
       <div className="max-w-380 mx-auto mt-21 bg-linear-to-r from-[#eee] to-[#E0E1DC]  rounded-3xl border-b-2 border-black/20 shadow-md shadow-black/20 flex justify-between items-center h-153">
         <div className="relative z-5 -top-[50%] w-[55%]">
           <img
-            src="/public/images/banner/banner1.png"
+            src="/images/banner/banner1.png"
             className="absolute -top-10 left-5 bottom-0 z-20"
           />
           <img
-            src="/public/images/banner/banner2.png"
+            src="/images/banner/banner2.png"
             className="absolute -top-12 -left-0 bottom-0 z-10"
           />
         </div>
@@ -18,7 +18,7 @@ export default function MobileAppBanner() {
         <div className="w-[45%] relative">
           <h2 className="flex items-center">
             <img
-              src="/public/images/logos/LOGO.png"
+              src="/images/logos/LOGO.png"
               className="h-[63px] object-cover"
             />
             <span className="text-[68px] font-bold tracking-tighter">

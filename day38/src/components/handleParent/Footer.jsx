@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="max-w-380 mx-auto pt-[93px] pb-[58px] flex items-center justify-between">
         <div className="left">
           <a href="#">
-            <img src="/public/images/logos/LOGO-footer.png" />
+            <img src="/images/logos/LOGO-footer.png" />
           </a>
           <div className="flex items-center gap-1 mt-[33px]">
             <DownloadApp />
@@ -63,7 +63,7 @@ export default function Footer() {
             <Button size={null} className={"w-[45px] h-[45px]"}>
               <a href="https://www.tiktok.com/" target="_blank">
                 <img
-                  src="/public/images/socials/tiktok.svg"
+                  src="/images/socials/tiktok.svg"
                   style={{ width: 28, height: 28 }}
                 />
               </a>
@@ -76,7 +76,7 @@ export default function Footer() {
             >
               <a href="https://www.snapchat.com/" target="_blank">
                 <img
-                  src="/public/images/socials/snapchat.svg"
+                  src="/images/socials/snapchat.svg"
                   style={{ width: 38, height: 38 }}
                 />
               </a>
