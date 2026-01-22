@@ -6,8 +6,9 @@ import CardDeal from "../handleChildren/CardDeal";
 import { dealCacheKey } from "@/caches/dealCacheKey";
 import TabsDeal from "../handleChildren/TabsDeal";
 export default function ExclusiveDeals() {
+  const baseUrl = import.meta.env.VITE_API_URL;
   const getDeals = async () => {
-    const response = await httpRequest.get(`http://localhost:3000/deals`);
+    const response = await httpRequest.get(`${baseUrl}/deals`);
     return response.data;
   };
   const { data } = useQuery({

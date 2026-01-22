@@ -5,8 +5,10 @@ import Card from "../handleChildren/Card";
 import { categoryCacheKey } from "@/caches/categoryCacheKey";
 
 export default function Categories() {
+  const baseUrl = import.meta.env.VITE_API_URL;
+
   const getCategories = async () => {
-    const response = await httpRequest.get(`http://localhost:3000/categories`);
+    const response = await httpRequest.get(`${baseUrl}/categories`);
     return response.data;
   };
   const { data } = useQuery({
