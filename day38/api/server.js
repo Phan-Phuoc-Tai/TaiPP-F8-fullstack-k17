@@ -1,8 +1,14 @@
-const jsonServer = require("json-server");
+import jsonServer from "json-server";
 const server = jsonServer.create();
-const router = jsonServer.router("db.json"); // Server dùng file này
+const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
+server.use(
+  jsonServer.rewriter({
+    "/api/*": "/$1",
+  }),
+);
 server.use(router);
-module.exports = server;
+
+export default server;
