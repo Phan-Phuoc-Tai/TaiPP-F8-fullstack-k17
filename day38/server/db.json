@@ -1,0 +1,244 @@
+{
+  "deals": [
+    {
+      "id": 1,
+      "type": "vegan",
+      "title": "Vegan",
+      "items": [
+        {
+          "id": 1,
+          "discount": 40,
+          "thumbnails": "/public/images/deals/deal1.png",
+          "restaurantName": "Restaurant 1",
+          "chefName": "Chef Burgers London 1"
+        },
+        {
+          "id": 2,
+          "discount": 20,
+          "thumbnails": "/public/images/deals/deal2.png",
+          "restaurantName": "Restaurant 2",
+          "chefName": "Grand Ai Cafe London 2"
+        },
+        {
+          "id": 3,
+          "discount": 17,
+          "thumbnails": "/public/images/deals/deal1.png",
+          "restaurantName": "Restaurant 3",
+          "chefName": "Butterbrot Caf'e London 3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "sushi",
+      "title": "Sushi",
+      "items": [
+        {
+          "id": 1,
+          "discount": 40,
+          "thumbnails": "/public/images/deals/deal1.png",
+          "restaurantName": "Restaurant 4",
+          "chefName": "Chef Burgers London 4"
+        },
+        {
+          "id": 2,
+          "discount": 20,
+          "thumbnails": "/public/images/deals/deal2.png",
+          "restaurantName": "Restaurant 5",
+          "chefName": "Grand Ai Cafe London 5"
+        },
+        {
+          "id": 3,
+          "discount": 17,
+          "thumbnails": "/public/images/deals/deal1.png",
+          "restaurantName": "Restaurant 6",
+          "chefName": "Butterbrot Caf'e London 6"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "pizza",
+      "title": "Pizza & Fast food",
+      "items": [
+        {
+          "id": 1,
+          "discount": 40,
+          "thumbnails": "/public/images/deals/deal1.png",
+          "restaurantName": "Restaurant 7",
+          "chefName": "Chef Burgers London 7"
+        },
+        {
+          "id": 2,
+          "discount": 20,
+          "thumbnails": "/public/images/deals/deal2.png",
+          "restaurantName": "Restaurant 8",
+          "chefName": "Grand Ai Cafe London 8"
+        },
+        {
+          "id": 3,
+          "discount": 17,
+          "thumbnails": "/public/images/deals/deal1.png",
+          "restaurantName": "Restaurant 9",
+          "chefName": "Butterbrot Caf'e London 9"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "Burgers & Fast food",
+      "quantity": 21,
+      "thumbnails": "/public/images/categories/category1.png",
+      "background": "#F5F5F5"
+    },
+    {
+      "id": 2,
+      "title": "Salads",
+      "quantity": 32,
+      "thumbnails": "/public/images/categories/category2.png",
+      "background": "#F5F5F5"
+    },
+    {
+      "id": 3,
+      "title": "Pasta & Casuals",
+      "quantity": 4,
+      "thumbnails": "/public/images/categories/category3.png",
+      "background": "#F5F5F5"
+    },
+    {
+      "id": 4,
+      "title": "Pizza",
+      "quantity": 32,
+      "thumbnails": "/public/images/categories/category4.png",
+      "background": "#F5F5F5"
+    },
+    {
+      "id": 5,
+      "title": "Breakfast",
+      "quantity": 4,
+      "thumbnails": "/public/images/categories/category5.png",
+      "background": "#F5F5F5"
+    },
+    {
+      "id": 6,
+      "title": "Soups",
+      "quantity": 32,
+      "thumbnails": "/public/images/categories/category6.png",
+      "background": "#F5F5F5"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "McDonald's London",
+      "thumbnails": "/public/images/restaurants/restaurant1.png",
+      "background": "#FC8A06"
+    },
+    {
+      "id": 2,
+      "name": "Papa Johns",
+      "thumbnails": "/public/images/restaurants/restaurant2.png",
+      "background": "#FC8A06"
+    },
+    {
+      "id": 3,
+      "name": "KFC West London",
+      "thumbnails": "/public/images/restaurants/restaurant3.png",
+      "background": "#FC8A06"
+    },
+    {
+      "id": 4,
+      "name": "Texas Chicken",
+      "thumbnails": "/public/images/restaurants/restaurant4.png",
+      "background": "#FC8A06"
+    },
+    {
+      "id": 5,
+      "name": "Burger King",
+      "thumbnails": "/public/images/restaurants/restaurant5.png",
+      "background": "#FC8A06"
+    },
+    {
+      "id": 6,
+      "name": "Burger King",
+      "thumbnails": "/public/images/restaurants/restaurant6.png",
+      "background": "#FC8A06"
+    }
+  ],
+  "aboutUs": [
+    {
+      "id": "1",
+      "tabName": "Frequent Questions",
+      "type": "frequentQuestions",
+      "questions": [
+        {
+          "id":"1",
+          "content": "How does Order.UK work?",
+          "answer": [
+            {
+              "id":"1",
+              "title": "Place an Order!",
+              "description": "Place order through our website or Mobile app",
+              "thumbnails": "/public/images/aboutUs/orderFood.png"
+            },
+            {
+              "id":"2",
+              "title": "Track Progress",
+              "description": "Your can track your order status with delivery time",
+              "thumbnails": "/public/images/aboutUs/food.png"
+            },
+            {
+              "id":"3",
+              "title": "Get your Order!",
+              "description": "Receive your order at a lighting fast speed!",
+              "thumbnails": "/public/images/aboutUs/order.png"
+            }
+          ]
+        },
+        {
+          "id":"2",
+          "content": "What payment methods are accepted?"
+        },
+        {
+          "id":"3",
+          "content": "Can I track my order in real-time?"
+        },
+        {
+          "id":"4",
+          "content": "Are there any special discounts or promotions available?"
+        },
+        {
+          "id":"5",
+          "content": "Is Order.UK available in my area?"
+        }
+      ]
+    }
+  ],
+  "counters": [
+    {
+      "id":"1",
+      "title": "Registered Riders",
+      "quantity" : "546",
+      "borderRight": "#D9D9D9"
+    },
+    {
+      "id":"2",
+      "title": "Orders Delivered",
+      "quantity" : "789,900",
+      "borderRight": "#D9D9D9"
+    },
+    {
+      "id":"3",
+      "title": "Restaurants Partnered",
+      "quantity" : "690",
+      "borderRight": "#D9D9D9"
+    },
+    {
+      "id":"4",
+      "title": "Food Items",
+      "quantity" : "17,457"
+    }
+  ]
+}
