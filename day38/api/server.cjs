@@ -1,4 +1,4 @@
-import jsonServer from "json-server";
+const jsonServer = require("json-server");
 const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
@@ -11,4 +11,4 @@ server.use(
 );
 server.use(router);
 
-export default server;
+module.exports = server;
