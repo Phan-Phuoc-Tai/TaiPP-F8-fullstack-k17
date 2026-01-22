@@ -6,9 +6,7 @@ import { restaurantCacheKey } from "@/caches/restaurantCacheKey";
 
 export default function Restaurants() {
   const getCategories = async () => {
-    const response = await httpRequest.get(
-      `http://localhost:3000/counters/restaurants`,
-    );
+    const response = await httpRequest.get(`http://localhost:3000/restaurants`);
     return response.data;
   };
   const { data } = useQuery({
