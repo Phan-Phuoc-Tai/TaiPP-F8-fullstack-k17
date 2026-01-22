@@ -45,7 +45,7 @@ export default function HeroSection() {
         </div>
         <div className="middle absolute bottom-0 left-0 right-0 z-18 mx-auto w-max">
           <img
-            src="/public/images/heroSections/heroSection1.png"
+            src="/images/heroSections/heroSection1.png"
             className="object-cover"
           />
         </div>
@@ -54,14 +54,14 @@ export default function HeroSection() {
           <div className="bg-[#FC8A06] rounded-tl-[65%] w-[626px] h-[565px] absolute bottom-0 right-0 z-5">
             <div className="absolute bottom-0 left-0">
               <img
-                src="/public/images/heroSections/heroSection2.png"
+                src="/images/heroSections/heroSection2.png"
                 className=" object-cover"
               />
             </div>
             <div className="absolute right-9 top-18 w-100">
               <div className=" bg-[#FBFBFB] w-72 p-4 rounded-lg mb-15 relative">
                 <div className="flex items-center justify-between">
-                  <img src="/public/images/logos/LOGO-sm.png" />
+                  <img src="/images/logos/LOGO-sm.png" />
                   <span className="text-gray-400">now</span>
                 </div>
                 <h3 className="font-semibold text-[13px]">
@@ -69,13 +69,13 @@ export default function HeroSection() {
                 </h3>
                 <p className="text-[13px]">Awaiting Restaurant acceptance</p>
                 <div className="absolute -top-12 right-3">
-                  <img src="/public/images/heroSections/1.png" />
+                  <img src="/images/heroSections/1.png" />
                 </div>
               </div>
 
               <div className=" bg-[#FBFBFB] w-72 p-4 rounded-lg mb-19 relative ml-24">
                 <div className="flex items-center justify-between">
-                  <img src="/public/images/logos/LOGO-sm.png" />
+                  <img src="/images/logos/LOGO-sm.png" />
                   <span className="text-gray-400">now</span>
                 </div>
                 <h3 className="font-semibold text-[13px]">
@@ -85,13 +85,13 @@ export default function HeroSection() {
                   Your order will be delivered shortly
                 </p>
                 <div className="absolute -top-12 right-3">
-                  <img src="/public/images/heroSections/2.png" />
+                  <img src="/images/heroSections/2.png" />
                 </div>
               </div>
 
               <div className=" bg-[#FBFBFB] w-72 p-4 rounded-lg relative ml-13">
                 <div className="flex items-center justify-between">
-                  <img src="/public/images/logos/LOGO-sm.png" />
+                  <img src="/images/logos/LOGO-sm.png" />
                   <span className="text-gray-400">now</span>
                 </div>
                 <h3 className="font-semibold text-[13px]">
@@ -99,7 +99,7 @@ export default function HeroSection() {
                 </h3>
                 <p className="text-[13px]">They're almost there - get ready!</p>
                 <div className="absolute -top-12 right-3">
-                  <img src="/public/images/heroSections/3.png" />
+                  <img src="/images/heroSections/3.png" />
                 </div>
               </div>
             </div>

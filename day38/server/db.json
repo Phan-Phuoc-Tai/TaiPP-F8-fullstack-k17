@@ -8,21 +8,21 @@
         {
           "id": 1,
           "discount": 40,
-          "thumbnails": "/public/images/deals/deal1.png",
+          "thumbnails": "/images/deals/deal1.png",
           "restaurantName": "Restaurant 1",
           "chefName": "Chef Burgers London 1"
         },
         {
           "id": 2,
           "discount": 20,
-          "thumbnails": "/public/images/deals/deal2.png",
+          "thumbnails": "/images/deals/deal2.png",
           "restaurantName": "Restaurant 2",
           "chefName": "Grand Ai Cafe London 2"
         },
         {
           "id": 3,
           "discount": 17,
-          "thumbnails": "/public/images/deals/deal1.png",
+          "thumbnails": "/images/deals/deal1.png",
           "restaurantName": "Restaurant 3",
           "chefName": "Butterbrot Caf'e London 3"
         }
@@ -36,21 +36,21 @@
         {
           "id": 1,
           "discount": 40,
-          "thumbnails": "/public/images/deals/deal1.png",
+          "thumbnails": "/images/deals/deal1.png",
           "restaurantName": "Restaurant 4",
           "chefName": "Chef Burgers London 4"
         },
         {
           "id": 2,
           "discount": 20,
-          "thumbnails": "/public/images/deals/deal2.png",
+          "thumbnails": "/images/deals/deal2.png",
           "restaurantName": "Restaurant 5",
           "chefName": "Grand Ai Cafe London 5"
         },
         {
           "id": 3,
           "discount": 17,
-          "thumbnails": "/public/images/deals/deal1.png",
+          "thumbnails": "/images/deals/deal1.png",
           "restaurantName": "Restaurant 6",
           "chefName": "Butterbrot Caf'e London 6"
         }
@@ -64,21 +64,21 @@
         {
           "id": 1,
           "discount": 40,
-          "thumbnails": "/public/images/deals/deal1.png",
+          "thumbnails": "/images/deals/deal1.png",
           "restaurantName": "Restaurant 7",
           "chefName": "Chef Burgers London 7"
         },
         {
           "id": 2,
           "discount": 20,
-          "thumbnails": "/public/images/deals/deal2.png",
+          "thumbnails": "/images/deals/deal2.png",
           "restaurantName": "Restaurant 8",
           "chefName": "Grand Ai Cafe London 8"
         },
         {
           "id": 3,
           "discount": 17,
-          "thumbnails": "/public/images/deals/deal1.png",
+          "thumbnails": "/images/deals/deal1.png",
           "restaurantName": "Restaurant 9",
           "chefName": "Butterbrot Caf'e London 9"
         }
@@ -90,42 +90,42 @@
       "id": 1,
       "title": "Burgers & Fast food",
       "quantity": 21,
-      "thumbnails": "/public/images/categories/category1.png",
+      "thumbnails": "/images/categories/category1.png",
       "background": "#F5F5F5"
     },
     {
       "id": 2,
       "title": "Salads",
       "quantity": 32,
-      "thumbnails": "/public/images/categories/category2.png",
+      "thumbnails": "/images/categories/category2.png",
       "background": "#F5F5F5"
     },
     {
       "id": 3,
       "title": "Pasta & Casuals",
       "quantity": 4,
-      "thumbnails": "/public/images/categories/category3.png",
+      "thumbnails": "/images/categories/category3.png",
       "background": "#F5F5F5"
     },
     {
       "id": 4,
       "title": "Pizza",
       "quantity": 32,
-      "thumbnails": "/public/images/categories/category4.png",
+      "thumbnails": "/images/categories/category4.png",
       "background": "#F5F5F5"
     },
     {
       "id": 5,
       "title": "Breakfast",
       "quantity": 4,
-      "thumbnails": "/public/images/categories/category5.png",
+      "thumbnails": "/images/categories/category5.png",
       "background": "#F5F5F5"
     },
     {
       "id": 6,
       "title": "Soups",
       "quantity": 32,
-      "thumbnails": "/public/images/categories/category6.png",
+      "thumbnails": "/images/categories/category6.png",
       "background": "#F5F5F5"
     }
   ],
@@ -133,37 +133,37 @@
     {
       "id": 1,
       "name": "McDonald's London",
-      "thumbnails": "/public/images/restaurants/restaurant1.png",
+      "thumbnails": "/images/restaurants/restaurant1.png",
       "background": "#FC8A06"
     },
     {
       "id": 2,
       "name": "Papa Johns",
-      "thumbnails": "/public/images/restaurants/restaurant2.png",
+      "thumbnails": "/images/restaurants/restaurant2.png",
       "background": "#FC8A06"
     },
     {
       "id": 3,
       "name": "KFC West London",
-      "thumbnails": "/public/images/restaurants/restaurant3.png",
+      "thumbnails": "/images/restaurants/restaurant3.png",
       "background": "#FC8A06"
     },
     {
       "id": 4,
       "name": "Texas Chicken",
-      "thumbnails": "/public/images/restaurants/restaurant4.png",
+      "thumbnails": "/images/restaurants/restaurant4.png",
       "background": "#FC8A06"
     },
     {
       "id": 5,
       "name": "Burger King",
-      "thumbnails": "/public/images/restaurants/restaurant5.png",
+      "thumbnails": "/images/restaurants/restaurant5.png",
       "background": "#FC8A06"
     },
     {
       "id": 6,
       "name": "Burger King",
-      "thumbnails": "/public/images/restaurants/restaurant6.png",
+      "thumbnails": "/images/restaurants/restaurant6.png",
       "background": "#FC8A06"
     }
   ],
@@ -181,19 +181,19 @@
               "id":"1",
               "title": "Place an Order!",
               "description": "Place order through our website or Mobile app",
-              "thumbnails": "/public/images/aboutUs/orderFood.png"
+              "thumbnails": "/images/aboutUs/orderFood.png"
             },
             {
               "id":"2",
               "title": "Track Progress",
               "description": "Your can track your order status with delivery time",
-              "thumbnails": "/public/images/aboutUs/food.png"
+              "thumbnails": "/images/aboutUs/food.png"
             },
             {
               "id":"3",
               "title": "Get your Order!",
               "description": "Receive your order at a lighting fast speed!",
-              "thumbnails": "/public/images/aboutUs/order.png"
+              "thumbnails": "/images/aboutUs/order.png"
             }
           ]
         },
