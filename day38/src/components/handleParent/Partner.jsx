@@ -5,7 +5,7 @@ export default function Partner() {
     <section>
       <div className="max-w-380 mx-auto mt-[53px] flex items-center justify-between">
         <div className="relative">
-          <img src="/public/images/partners/partner1.png" />
+          <img src="/images/partners/partner1.png" />
 
           <div className="absolute top-0 left-[70px] px-8 py-4 bg-white rounded-b-xl">
             <p className="font-bold text-lg text-[#03081f]">
@@ -32,7 +32,7 @@ export default function Partner() {
         </div>
 
         <div className="relative">
-          <img src="/public/images/partners/partner2.png" />
+          <img src="/images/partners/partner2.png" />
 
           <div className="absolute top-0 left-[70px] px-8 py-4 bg-white rounded-b-xl">
             <p className="font-bold text-lg text-[#03081f]">
