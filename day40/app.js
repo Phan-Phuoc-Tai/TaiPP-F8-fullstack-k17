@@ -11,10 +11,14 @@ const readUsers = async () => {
 app.get("/users", async (request, response) => {
   const users = await readUsers();
   const query = request.query.q;
+
+  if (!query) {
+    response.status(200);
+    response.json(users);
+    return;
+  }
+
   const resultsWithQuery = users.filter((user) => {
-    if (!query) {
-      return;
-    }
     return (
       user.name
         .toString()
@@ -26,23 +30,17 @@ app.get("/users", async (request, response) => {
         .includes(query.toLocaleLowerCase())
     );
   });
-  if (query && !resultsWithQuery.length) {
-    response.status(404);
-    response.json({
-      message: `Not found with query: ${query}`,
-    });
-    return;
-  }
+
   response.status(200);
-  response.json(query ? resultsWithQuery : users);
+  response.json(resultsWithQuery);
 });
 
 //API lấy thông tin một user (GET /users/:id)
 app.get("/users/:id", async (request, response) => {
   const users = await readUsers();
-  const userId = request.params.id;
-  const userWithId = users.filter((user) => user.id === +userId);
-  if (userId && !userWithId.length) {
+  const userId = +request.params.id;
+  const user = users.find((user) => user.id === userId);
+  if (!user) {
     response.status(404);
     response.json({
       message: "User not found",
@@ -50,7 +48,7 @@ app.get("/users/:id", async (request, response) => {
     return;
   }
   response.status(200);
-  response.json(userWithId);
+  response.json(user);
 });
 
 //API tạo mới user (POST /users)
@@ -84,15 +82,12 @@ app.post("/users", async (request, response) => {
 app.put("/users/:id", async (request, response) => {
   const users = await readUsers();
   const updateUser = request.body;
-  const idUserUpdate = request.params.id;
-  const newUsers = users.filter((user) => {
-    if (user.id === +idUserUpdate) {
-      user.name = updateUser.name;
-      user.email = updateUser.email;
-      return user;
-    }
+  const idUserUpdate = +request.params.id;
+  const userIndex = users.findIndex((user) => {
+    return user.id === idUserUpdate;
   });
-  if (!newUsers.length) {
+
+  if (userIndex === -1) {
     response.status(404);
     response.json({
       message: "User not found",
@@ -100,9 +95,10 @@ app.put("/users/:id", async (request, response) => {
     return;
   }
 
+  users[userIndex] = { ...users[userIndex], ...updateUser }; // dùng ... để Override thuộc tính trùng tên
   await fs.writeFile(USERS_URL, JSON.stringify(users, null, 2));
   response.status(200);
-  response.json(newUsers);
+  response.json(users[userIndex]);
 });
 
 //API xóa user (DELETE /users/:id)
