@@ -100,7 +100,11 @@ const trello = {
         newList.onclick = (e) => {
           e.stopPropagation();
           newList.replaceWith(
-            this.createContentAdd("input", "Enter List Title...", "Create List")
+            this.createContentAdd(
+              "input",
+              "Enter List Title...",
+              "Create List",
+            ),
           );
           this.handleContentAdd();
         };
@@ -127,7 +131,7 @@ const trello = {
         const cardList = this.createCardList();
         const cardHeaderTitle = cardList.querySelector(".card-header input");
         cardHeaderTitle.value = formControl.value;
-        // cardHeaderTitle.disabled = true;
+
         container.insertBefore(cardList, contentAdd);
         formControl.value = "";
         formControl.focus();
@@ -159,7 +163,7 @@ const trello = {
       const addNewCard = this.createContentAdd(
         "textarea",
         "Enter card title...",
-        "Add card"
+        "Add card",
       );
       const contentBody = contentFooter.previousElementSibling;
       contentBody.append(addNewCard);
