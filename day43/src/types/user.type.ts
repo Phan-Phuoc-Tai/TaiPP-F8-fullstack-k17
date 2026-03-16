@@ -1,7 +1,7 @@
 export interface User {
+  fullName: string;
   email: string;
   password?: string;
-  fullName?: string;
 }
 
 declare module "express" {

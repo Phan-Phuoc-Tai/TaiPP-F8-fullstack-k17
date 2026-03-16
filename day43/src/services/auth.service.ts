@@ -17,7 +17,7 @@ export const authService = {
     users.push(formData);
     const newUser = {
       email: formData.email,
-      fullName: formData.fullName!,
+      fullName: formData.fullName,
     };
     return newUser;
   },
@@ -31,7 +31,8 @@ export const authService = {
       throw new Error("Email hoặc mật khẩu không chính xác");
     }
     const safeUser = {
-      email: formData.email,
+      email: userValid.email,
+      fullName: userValid.fullName,
     };
     return safeUser;
   },
