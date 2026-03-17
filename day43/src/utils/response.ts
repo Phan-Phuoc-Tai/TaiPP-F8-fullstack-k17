@@ -18,7 +18,7 @@ export const successResponse = (
 export const errorResponse = (
   response: Response,
   data: null,
-  message: string,
+  message: string | Record<string, string>, //add type Record to flexible when use zodError
   status: boolean,
   statusCode: number = 500,
 ) => {
