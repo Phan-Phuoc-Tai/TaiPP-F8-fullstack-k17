@@ -43,6 +43,9 @@ WHERE ((ten_kh LIKE '%H%')
    OR (ten_kh LIKE '%M%'))
    AND LENGTH(ten_kh) <= 20;
 
+--4. Hiển thị danh sách tên khách hàng duy nhất
+SELECT DISTINCT ten_kh FROM khach_hang
+
 --5. Tìm dịch vụ đi kèm theo đơn vị tính và giá
 SELECT
     *
