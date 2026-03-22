@@ -232,7 +232,7 @@ HAVING COUNT(order_items.product_id) = 0;
 -- Bài 9: Tính doanh thu theo từng tháng
 WITH total_revenue_2026JAN_cte AS (
     SELECT
-        '2026-01' AS Month,
+        '2026-01' AS "month",
         SUM(order_items.quantity * order_items.price_at_purchase)
             AS total_revenue
     FROM orders
@@ -243,7 +243,7 @@ WITH total_revenue_2026JAN_cte AS (
 ),
 total_revenue_2025DEC_cte AS (
     SELECT
-        '2025-12' AS Month,
+        '2025-12' AS "month",
         SUM(order_items.quantity * order_items.price_at_purchase)
             AS total_revenue
     FROM orders
@@ -254,7 +254,7 @@ total_revenue_2025DEC_cte AS (
 ),
 total_order_2026JAN_cte AS (
     SELECT
-        '2026-01' AS Month,
+        '2026-01' AS "month",
         COUNT(orders.order_date) AS total_order
     FROM orders
     WHERE orders.order_date > '2025-12-31'
@@ -262,7 +262,7 @@ total_order_2026JAN_cte AS (
 ),
 total_order_2025DEC_cte AS (
     SELECT
-        '2025-12' AS Month,
+        '2025-12' AS "month",
         COUNT(orders.order_date) AS total_order
     FROM orders
     WHERE orders.order_date > '2025-11-30'
@@ -275,8 +275,8 @@ SELECT
         AS avg_order
 FROM total_revenue_2025DEC_cte
 INNER JOIN total_order_2025DEC_cte
-ON total_revenue_2025DEC_cte.Month = total_order_2025DEC_cte.Month
-UNION ALL -- nối SELECT
+ON total_revenue_2025DEC_cte."month" = total_order_2025DEC_cte."month"
+UNION ALL
 SELECT
     total_revenue_2026JAN_cte.*,
     total_order_2026JAN_cte.total_order,
@@ -284,7 +284,7 @@ SELECT
         AS avg_order
 FROM total_revenue_2026JAN_cte
 INNER JOIN total_order_2026JAN_cte
-ON total_revenue_2026JAN_cte.Month = total_order_2026JAN_cte.Month;
+ON total_revenue_2026JAN_cte."month" = total_order_2026JAN_cte."month";
 
 -- Bài 10: Tìm khách hàng trung thành
 SELECT
