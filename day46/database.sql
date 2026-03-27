@@ -26,6 +26,11 @@ create table transaction_types
      unique
 );
 
+-- Thêm record vào bảng transaction_types
+INSERT INTO transaction_types (name) VALUES ('deposit');
+INSERT INTO transaction_types (name) VALUES ('withdraw');
+INSERT INTO transaction_types (name) VALUES ('transfer');
+
 -- Tạo bảng transactions
 create table transactions
 (

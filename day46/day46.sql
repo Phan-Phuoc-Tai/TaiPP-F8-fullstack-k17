@@ -14,17 +14,20 @@
 BEGIN;
 UPDATE wallets
 SET balance = balance - 7500
-WHERE owner_name = 'usera';
+-- WHERE owner_name = 'usera';
+-- NOTE: Transaction sử dụng WHERE owner_name = 'usera' có thể gây ra lỗi nếu tên người dùng không tồn tại hoặc trùng lặp. Nên sử dụng wallet ID thay vì tên người dùng để đảm bảo chính xác
+WHERE id = 1;
 
 UPDATE wallets
 SET balance = balance + 7500
-WHERE owner_name = 'userb';
+-- WHERE owner_name = 'userb';
+WHERE id = 2;
 
 INSERT INTO transactions (sender_wallet_id, receiver_wallet_id, type_id, amount, note)
 VALUES (1, 2, 3, 7500,'usera transfer');
 
 INSERT INTO transaction_logs (transaction_id, step, status)
-VALUES (5, 'Automatic money transfer', 'success');
+VALUES (LASTVAL(), 'Automatic money transfer', 'success');
 
 COMMIT;
 
@@ -39,7 +42,7 @@ INSERT INTO transactions (sender_wallet_id, receiver_wallet_id, type_id, amount,
 VALUES (null, 1, 1, 5500, 'deposit with live bank');
 
 INSERT INTO transaction_logs (transaction_id, step, status)
-VALUES (6, 'Automatic money deposit', 'success');
+VALUES (LASTVAL(), 'Automatic money deposit', 'success');
 COMMIT;
 
 -- Nếu bỏ transaction và hai lệnh UPDATE chạy riêng lẻ, điều gì sẽ xảy ra
