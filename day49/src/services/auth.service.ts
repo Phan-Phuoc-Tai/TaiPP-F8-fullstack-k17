@@ -88,12 +88,9 @@ export const authService = {
   },
   async refreshToken(token: string) {
     //verify token
-    console.log(token);
 
     const decoded = jwtService.verifyRefreshToken(token);
     if (!decoded) {
-      console.log("not decoded");
-
       return false;
     }
     //Check refreshToken có tồn tại trong database
@@ -101,8 +98,6 @@ export const authService = {
       where: { token },
     });
     if (!refreshToken) {
-      console.log("not found token");
-
       return false;
     }
     //Check expiresAt đã hết hạn chưa
