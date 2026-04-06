@@ -91,18 +91,18 @@ export const authService = {
 
     const decoded = jwtService.verifyRefreshToken(token);
     if (!decoded) {
-      return false;
+      throw new Error("Refresh token invalid or expired");
     }
     //Check refreshToken có tồn tại trong database
     const refreshToken = await prisma.refreshToken.findUnique({
       where: { token },
     });
     if (!refreshToken) {
-      return false;
+      throw new Error("Refresh token not found");
     }
     //Check expiresAt đã hết hạn chưa
     if (refreshToken.expiresAt < new Date()) {
-      return false;
+      throw new Error("Refresh token expired");
     }
 
     const { userId } = decoded as JwtPayload;
