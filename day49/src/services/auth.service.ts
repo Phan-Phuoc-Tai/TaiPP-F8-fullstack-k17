@@ -14,7 +14,7 @@ export const authService = {
       ...userData,
       password: passwordHash,
     });
-    //Gửi email xác thực, chào mừng(pending: phải học queue)
+    //Gửi email xác thực, chào mừng
     //Tạo token (Gọi jwtService)
     const accessToken = jwtService.createAccessToken(user.id);
     return {
