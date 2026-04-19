@@ -23,5 +23,4 @@ export const authMiddleware = async (
   request.user = user; //Cắm user{} vào tất cả request
   request.token = token; //Cắm token vào tất cả request
   next();
-  //2:42
 };

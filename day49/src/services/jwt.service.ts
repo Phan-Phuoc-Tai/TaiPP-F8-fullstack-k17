@@ -2,7 +2,8 @@ const JWT_SECRET = process.env.JWT_SECRET as string;
 const JWT_EXPIRED = process.env.JWT_EXPIRED as unknown as number;
 
 const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET as string;
-const JWT_REFRESH_EXPIRED = process.env.JWT_EXPIRED as unknown as number;
+const JWT_REFRESH_EXPIRED = process.env
+  .JWT_REFRESH_EXPIRED as unknown as number;
 
 import jsonwebtoken from "jsonwebtoken";
 export const jwtService = {

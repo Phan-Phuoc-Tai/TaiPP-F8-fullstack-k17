@@ -48,17 +48,19 @@ export const authController = {
         message: "Refresh token is required",
       });
     }
-    const tokens = await authService.refreshToken(token);
-    if (!tokens) {
+
+    try {
+      const tokens = await authService.refreshToken(token);
+      return response.status(200).json({
+        success: true,
+        message: "Refresh token success",
+        data: tokens,
+      });
+    } catch {
       return response.status(400).json({
         success: false,
-        message: "Refresh token invalid",
+        message: "Refresh token invalid or expired",
       });
     }
-    response.json({
-      success: true,
-      message: "Refresh token success",
-      data: tokens,
-    });
   },
 };
