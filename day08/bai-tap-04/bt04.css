@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* căn chỉnh item ra giữa
+căn chỉnh box ra giữa
+thiết lập chiều cao, rộng cho box
+position relative cho box, để cố định */
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  margin: 30px auto;
+  border-radius: 4px;
+  background: gray;
+  color: #f1f1f1;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+/* tạo lớp giả before màu đỏ,
+  sau đó dùng position absolute,
+  right & bottom 100% để đưa lớp giả nằm ngoài box,
+  theo top & left = 0 thì lớp giả đỏ sẽ nằm ở vị trí đối diện với box*/
+.box::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: red;
+  position: absolute;
+  right: 100%;
+  bottom: 100%;
+}
+
+/* khi hover vào box thì lớp giả đỏ sẽ nằm khớp với box,
+sử dụng transition để tạo hiệu ứng */
+.box:hover::before {
+  bottom: 0;
+  right: 0;
+  background: red;
+  transition: 0.4s ease;
+  transition-property: top left;
+}
+
+/* làm ngược lại với before */
+.box::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: red;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transition: 0.4s ease;
+  transition-property: top left;
+}
+
+/* khi hover thì after cũng được khớp với box,
+lúc này sẽ cùng hiển thị cả hiệu ứng của before,
+nên sử dụng transition delay nhỏ hơn before,
+tạo cảm giác màu đỏ sẽ bao phủ box.
+Lưu ý: thời gian delay phải lớn hơn 50% của before.  */
+
+.box:hover::after {
+  top: 0;
+  left: 0;
+  background: red;
+  transition-delay: 0.3s;
+}
+
+.box p {
+  position: absolute;
+  z-index: 90;
+}

@@ -1,0 +1,14 @@
+model Video {
+  id        Int      @id @default(autoincrement())
+  title     String?
+  thumbnail String?
+  duration  Int?
+  url       String
+  comments  Int?
+  views     Int?
+  likes     Int?
+  createdAt DateTime @default(now()) @db.Timestamp()
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamp()
+
+  @@map("videos")
+}

@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body {
+  max-width: 500px;
+  margin-top: 60px;
+  margin-inline: auto;
+}
+
+h1 {
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 36px;
+}
+
+.form-login {
+  padding: 16px;
+  font-size: 20px;
+  label {
+    display: block;
+  }
+  input {
+    display: block;
+    margin-block: 8px 16px;
+    width: 100%;
+    padding-inline: 16px;
+    padding-block: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    &:focus {
+      border: 1px solid #333;
+    }
+  }
+  button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    background: rgb(15, 129, 244);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    &:hover {
+      background: rgba(15, 129, 244, 0.8);
+    }
+  }
+}

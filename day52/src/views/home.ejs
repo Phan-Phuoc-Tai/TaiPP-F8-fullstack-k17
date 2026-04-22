@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ</title>
+  </head>
+  <body>
+    <h1>Trang chủ</h1>
+    <form action="/logout" method="post">
+      <h2>Xin chào: <%= name %></h2>
+      <button>Đăng xuất</button>
+    </form>
+    <div id="price-container"></div>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io();
+
+      socket.on("coin-prices", (data) => {
+        const priceContainer = document.querySelector("#price-container");
+        data.forEach((item) => {
+          const element = priceContainer.querySelector(`#${item.name}`);
+          if (!element) {
+            const div = document.createElement("div");
+            const span = document.createElement("span");
+
+            div.innerText = `${item.name}: `;
+            priceContainer.append(div);
+            div.append(span);
+            div.id = item.name;
+
+            span.innerText = `${item.price} `;
+
+            span.style.color = "#27ae60";
+            setTimeout(() => (span.style.color = ""), 1000);
+            return;
+          }
+          const span = element.querySelector("span");
+          span.innerText = item.price;
+          span.style.color = "#27ae60";
+          setTimeout(() => (span.style.color = ""), 1000);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+model Product {
+  id        Int      @id @default(autoincrement())
+  name      String
+  desc      String?
+  price     Float
+  stock     Int      @default(0)
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now()) @db.Timestamp()
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamp()
+
+  @@map("products")
+}

@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --bg-primary-color: #8758ff;
+  --bg-secondary-color: #1a1a40;
+  --bg-error-color: lightpink;
+  --text-white: #fff;
+  --text-completed: #c5aeff;
+  --text-error: red;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary-color);
+}
+
+button {
+  outline: none;
+  background: none;
+  border: none;
+  color: var(--text-white);
+  user-select: none;
+}
+
+.todo-btn {
+  background: var(--bg-primary-color);
+  padding: 10px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.App {
+  text-align: center;
+}
+
+.TodoWrapper {
+  margin-top: 8rem;
+  background-color: var(--bg-secondary-color);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  color: var(--text-white);
+  font-family: "Poppins", sans-serif;
+}
+
+.TodoWrapper h1 {
+  margin-bottom: 0.8rem;
+  line-height: normal;
+  font-size: 2.8rem;
+}
+
+.TodoWrapper .TodoForm {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.TodoWrapper .TodoForm .todo-input {
+  width: 300px;
+  border: 1px solid var(--bg-primary-color);
+  padding: 0.8rem 1.6rem;
+  color: var(--text-white);
+  background: none;
+  font-size: 1.6rem;
+}
+
+.TodoWrapper .Todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+  padding: 1.2rem 1.6rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-primary-color);
+  color: var(--text-white);
+}
+
+.TodoWrapper .Todo .Todo-options {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.TodoWrapper .Todo p,
+.TodoWrapper .Todo .Todo-options i {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.TodoWrapper .Todo p.completed {
+  text-decoration: line-through;
+  color: var(--text-completed);
+}
+.error {
+  padding-block: 0.4rem;
+  border-radius: 0.3rem;
+  background: var(--bg-error-color);
+  font-size: 1.4rem;
+  color: var(--text-error);
+}

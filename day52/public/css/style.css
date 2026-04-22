@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body {
+  max-width: 400px;
+  margin-top: 60px;
+  margin-inline: auto;
+}
+
+h1 {
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 36px;
+}
+
+.form-login {
+  padding: 16px;
+  font-size: 20px;
+  button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 12px;
+    border-radius: 6px;
+    background: #f1f1f1;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    &:hover {
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Interactive menu</title>
+    <style type="text/tailwindcss">
+      #root {
+        @apply relative;
+      }
+      #root .menu {
+        @apply flex justify-center flex-col gap-2 max-w-[500px] mx-[auto] mt-8 px-5 py-2 border rounded-md;
+      }
+      .menu li {
+        @apply flex items-center justify-between border-[2px] border-transparent text-xl;
+      }
+      .menu li.selected {
+        @apply border-[2px] border-dashed border-green-600;
+      }
+
+      .menu .content {
+        @apply inline-block p-2;
+      }
+
+      .menu .up {
+        @apply text-green-500 font-bold px-2 ml-[auto];
+      }
+      .menu .down {
+        @apply text-red-500 font-bold px-2;
+      }
+      .menu .up,
+      .menu .down {
+        @apply select-none cursor-pointer;
+      }
+
+      .submenu {
+        @apply w-[100px] absolute shadow shadow-neutral-500 opacity-0 invisible transition-opacity duration-[400ms];
+      }
+
+      .submenu li {
+        @apply px-4 py-2 bg-white text-lg text-neutral-600 select-none cursor-pointer hover:bg-neutral-300;
+      }
+
+      #modal {
+        @apply absolute inset-0 flex justify-center opacity-0 invisible transition-opacity duration-[400ms];
+      }
+
+      #modal .overlay {
+        @apply absolute inset-0 bg-black opacity-40 z-10;
+      }
+
+      #modal .editSpace {
+        @apply absolute z-20 mt-[120px] bg-neutral-300 p-4;
+      }
+      #modal .editSpace .inputText {
+        @apply outline-none border border-neutral-400 rounded-sm px-3 py-2 bg-white focus:border-black;
+      }
+      #modal .editSpace .saveBtn {
+        @apply border border-neutral-500 px-3 py-2 ml-2 rounded-sm font-semibold hover:bg-neutral-700 hover:text-white cursor-pointer select-none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="modal"></div>
+    <script src="./main.js"></script>
+  </body>
+</html>

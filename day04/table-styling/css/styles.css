@@ -1,0 +1,35 @@
+/* xử lý border trong table về nét mảnh,
+bóng râm màu xám */
+table {
+  border-collapse: collapse;
+  box-shadow: 10px 10px 5px gray;
+  margin: 100px auto;
+}
+
+/* th có màu nền darkblue, chữ white,
+padding top & bot = 6; left & right = 4 */
+th {
+  background-color: darkblue;
+  color: #fff;
+  padding: 6px 4px;
+}
+
+/* màu trắng cho th, td */
+th, td {
+  border: 1px solid white;
+}
+
+/* td có padding top & bot = 1/2 left & right */
+td {
+  padding: 2px 4px;
+}
+
+/* dòng lẻ có màu aqua, dòng chẵn có màu trắng */
+tr:nth-child(odd) td {
+  background-color: aqua;
+}
+
+/* lớp giả hover vào td thì tr cũng tô màu */
+tr:hover td {
+  background-color: pink;
+}
