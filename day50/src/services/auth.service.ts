@@ -179,7 +179,9 @@ const authService = {
 
     //limit 3 submission in 60s
     const count = await redisClient.incr(`resend:${userExistWithoutVerify.id}`);
-    await redisClient.expire(`resend:${userExistWithoutVerify.id}`, 60);
+    if (count === 1) {
+      await redisClient.expire(`resend:${userExistWithoutVerify.id}`, 60);
+    }
     const ttlOTP = await redisClient.ttl(`resend:${userExistWithoutVerify.id}`);
     if (count > 3 && ttlOTP) {
       throw new Error(
@@ -211,7 +213,9 @@ const authService = {
 
     //limit 3 submission in 60s
     const count = await redisClient.incr(`reset:${user.id}:count`);
-    await redisClient.expire(`reset:${user.id}:count`, 60);
+    if (count === 1) {
+      await redisClient.expire(`reset:${user.id}:count`, 60);
+    }
     const ttlOTP = await redisClient.ttl(`reset:${user.id}:count`);
     if (count > 3 && ttlOTP) {
       throw new Error(
